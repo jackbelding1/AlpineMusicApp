@@ -6,16 +6,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath[1])
+        let playerItem = AVPlayerItem(url: streams[indexPath.row])
+        player.replaceCurrentItem(with: playerItem)
+        present(PlayerController, animated: true) {
+
+            self.player.play()
+        }
     }
 }
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 35
+        return streams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

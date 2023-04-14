@@ -71,7 +71,6 @@
 				7787CC9E29E86EC100167F99 /* SceneDelegate.swift */,
 				7787CCA529E86EC200167F99 /* Assets.xcassets */,
 				7787CCAA29E86EC200167F99 /* Info.plist */,
-				7787CCB029E8707F00167F99 /* CustomTabBarController.swift */,
 			);
 			path = "Alpine Music App";
 			sourceTree = "<group>";
@@ -79,6 +78,7 @@
 		7787CCB629E87BFC00167F99 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7787CCB029E8707F00167F99 /* CustomTabBarController.swift */,
 				7787CCA029E86EC100167F99 /* HomeVC.swift */,
 				7787CCB429E8714A00167F99 /* SettingsVC.swift */,
 				7787CCB229E8713900167F99 /* AboutVC.swift */,
