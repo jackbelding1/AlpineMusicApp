@@ -13,7 +13,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet var streamView: UITableView!
     
-    let streams:[URL] = [URL(string: "https://www.bloomberg.com/media-manifest/streams/asia.m3u8")!] // TODO: populate this list from firebase
+    let streams:[Stream] = [Stream.testStream] // TODO: populate this list from firebase
     let player = AVPlayer()
     let PlayerController = AVPlayerViewController()
     

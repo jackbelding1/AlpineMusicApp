@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775E601C29E9D3F400582A62 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601B29E9D3F400582A62 /* FirebaseAnalytics */; };
+		775E601E29E9D3F400582A62 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601D29E9D3F400582A62 /* FirebaseFirestore */; };
+		775E602029E9D3F400582A62 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601F29E9D3F400582A62 /* FirebaseFirestoreSwift */; };
+		775E602229E9D6F600582A62 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 775E602129E9D6F600582A62 /* GoogleService-Info.plist */; };
+		775E602629E9D88600582A62 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E602529E9D88600582A62 /* Stream.swift */; };
 		7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9C29E86EC100167F99 /* AppDelegate.swift */; };
 		7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9E29E86EC100167F99 /* SceneDelegate.swift */; };
 		7787CCA129E86EC100167F99 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CCA029E86EC100167F99 /* HomeVC.swift */; };
@@ -20,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		775E602129E9D6F600582A62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		775E602529E9D88600582A62 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		7787CC9929E86EC100167F99 /* Alpine Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpine Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7787CC9C29E86EC100167F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7787CC9E29E86EC100167F99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +46,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775E601C29E9D3F400582A62 /* FirebaseAnalytics in Frameworks */,
+				775E601E29E9D3F400582A62 /* FirebaseFirestore in Frameworks */,
+				775E602029E9D3F400582A62 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		775E602329E9D71F00582A62 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				775E602529E9D88600582A62 /* Stream.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		775E602429E9D73800582A62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7787CCA529E86EC200167F99 /* Assets.xcassets */,
+				7787CCAA29E86EC200167F99 /* Info.plist */,
+				775E602129E9D6F600582A62 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7787CC9029E86EC100167F99 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +92,13 @@
 		7787CC9B29E86EC100167F99 /* Alpine Music App */ = {
 			isa = PBXGroup;
 			children = (
+				775E602429E9D73800582A62 /* Resources */,
+				775E602329E9D71F00582A62 /* Models */,
 				7787CCB829E87C2A00167F99 /* TableViewCells */,
 				7787CCB729E87C1000167F99 /* Views */,
 				7787CCB629E87BFC00167F99 /* ViewControllers */,
 				7787CC9C29E86EC100167F99 /* AppDelegate.swift */,
 				7787CC9E29E86EC100167F99 /* SceneDelegate.swift */,
-				7787CCA529E86EC200167F99 /* Assets.xcassets */,
-				7787CCAA29E86EC200167F99 /* Info.plist */,
 			);
 			path = "Alpine Music App";
 			sourceTree = "<group>";
@@ -119,6 +147,11 @@
 			dependencies = (
 			);
 			name = "Alpine Music App";
+			packageProductDependencies = (
+				775E601B29E9D3F400582A62 /* FirebaseAnalytics */,
+				775E601D29E9D3F400582A62 /* FirebaseFirestore */,
+				775E601F29E9D3F400582A62 /* FirebaseFirestoreSwift */,
+			);
 			productName = "Alpine Music App";
 			productReference = 7787CC9929E86EC100167F99 /* Alpine Music App.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +180,9 @@
 				Base,
 			);
 			mainGroup = 7787CC9029E86EC100167F99;
+			packageReferences = (
+				775E601A29E9D3F400582A62 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7787CC9A29E86EC100167F99 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7787CCA929E86EC200167F99 /* LaunchScreen.storyboard in Resources */,
+				775E602229E9D6F600582A62 /* GoogleService-Info.plist in Resources */,
 				7787CCA629E86EC200167F99 /* Assets.xcassets in Resources */,
 				7787CCA429E86EC100167F99 /* Main.storyboard in Resources */,
 			);
@@ -177,6 +214,7 @@
 				7787CCA129E86EC100167F99 /* HomeVC.swift in Sources */,
 				7787CCBA29E87C4100167F99 /* CurrentStreamCell.swift in Sources */,
 				7787CCB329E8713900167F99 /* AboutVC.swift in Sources */,
+				775E602629E9D88600582A62 /* Stream.swift in Sources */,
 				7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */,
 				7787CCB129E8707F00167F99 /* CustomTabBarController.swift in Sources */,
 				7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */,
@@ -327,9 +365,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Alpine\\ Music\\ App/Resources/Info.plist";
 				DEVELOPMENT_TEAM = 4QY57KKASP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Alpine Music App/Info.plist";
+				INFOPLIST_FILE = "Alpine Music App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -355,9 +394,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "Alpine\\ Music\\ App/Resources/Info.plist";
 				DEVELOPMENT_TEAM = 4QY57KKASP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Alpine Music App/Info.plist";
+				INFOPLIST_FILE = "Alpine Music App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -398,6 +438,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		775E601A29E9D3F400582A62 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		775E601B29E9D3F400582A62 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 775E601A29E9D3F400582A62 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		775E601D29E9D3F400582A62 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 775E601A29E9D3F400582A62 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		775E601F29E9D3F400582A62 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 775E601A29E9D3F400582A62 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7787CC9129E86EC100167F99 /* Project object */;
 }
