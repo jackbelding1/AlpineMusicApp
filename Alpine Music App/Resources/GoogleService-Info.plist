@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>608970407626-91ts24hl82baigv8mcqk9hnheij8lf45.apps.googleusercontent.com</string>
+	<string>1094722200101-c90ne3q39kptfikb1d08oc0il2o9avcj.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.608970407626-91ts24hl82baigv8mcqk9hnheij8lf45</string>
+	<string>com.googleusercontent.apps.1094722200101-c90ne3q39kptfikb1d08oc0il2o9avcj</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDDbLr4ZE2Tij0I6nQPWkAbZu36LflwBlA</string>
+	<string>AIzaSyAq0kOI9zHPgc6d3SkTXAWZeJ69PKuI550</string>
 	<key>GCM_SENDER_ID</key>
-	<string>608970407626</string>
+	<string>1094722200101</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>alpine-software.Alpine-Music-App</string>
 	<key>PROJECT_ID</key>
-	<string>alpine-music-app</string>
+	<string>alpine-music-app-18884</string>
 	<key>STORAGE_BUCKET</key>
-	<string>alpine-music-app.appspot.com</string>
+	<string>alpine-music-app-18884.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:608970407626:ios:9db322d36dd9a2a1fdfe33</string>
+	<string>1:1094722200101:ios:e4ca949e1c574a65f615cc</string>
 </dict>
 </plist>
