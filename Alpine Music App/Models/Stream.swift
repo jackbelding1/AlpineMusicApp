@@ -10,9 +10,11 @@ import Foundation
 struct Stream {
     var title: String
     var url:String
+    var thumbnailUrl:String
 }
 
 extension Stream {
     static let testStream = Stream(title: "Bloomberg Asia",
-                                   url: "https://www.bloomberg.com/media-manifest/streams/asia.m3u8")
+                                   url: "https://www.bloomberg.com/media-manifest/streams/asia.m3u8",
+                                    thumbnailUrl: "https://drive.google.com/uc?id=1XPAU7Kxii6jxIZdnLABV6OQWAC-KdUAl")
 }
