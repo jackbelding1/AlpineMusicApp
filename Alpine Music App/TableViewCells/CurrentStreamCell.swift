@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 import AVFoundation
 
 extension HomeVC: UITableViewDelegate {
@@ -20,13 +21,26 @@ extension HomeVC: UITableViewDelegate {
 }
 
 extension HomeVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0;
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return streams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = streamView.dequeueReusableCell(withIdentifier: "currentStreamCell", for: indexPath)
-        cell.imageView?.image = UIImage(named: "logo.jpg")
+        let url = URL(string: streams[indexPath.row].thumbnailUrl)
+        cell.imageView?.kf.setImage(with: url) { result in
+            switch result {
+            case .success(let value):
+                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
         cell.textLabel?.text = streams[indexPath.row].title
         return cell
     }

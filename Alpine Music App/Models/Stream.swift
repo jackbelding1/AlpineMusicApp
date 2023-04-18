@@ -7,12 +7,14 @@
 
 import Foundation
 
-struct Stream {
+struct Stream: Codable {
+    var thumbnailUrl:String
     var title: String
     var url:String
 }
 
-extension Stream {
-    static let testStream = Stream(title: "Bloomberg Asia",
+extension Stream{
+    static let testStream = Stream(thumbnailUrl: "https://drive.google.com/uc?id=1XPAU7Kxii6jxIZdnLABV6OQWAC-KdUAl",
+                                   title: "Bloomberg Asia",
                                    url: "https://www.bloomberg.com/media-manifest/streams/asia.m3u8")
 }
