@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7744094829EC7AE900904506 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7744094729EC7AE900904506 /* Kingfisher */; };
+		7744094B29EC84F900904506 /* StreamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744094A29EC84F900904506 /* StreamRepository.swift */; };
 		775E601C29E9D3F400582A62 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601B29E9D3F400582A62 /* FirebaseAnalytics */; };
 		775E601E29E9D3F400582A62 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601D29E9D3F400582A62 /* FirebaseFirestore */; };
 		775E602029E9D3F400582A62 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601F29E9D3F400582A62 /* FirebaseFirestoreSwift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7744094A29EC84F900904506 /* StreamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRepository.swift; sourceTree = "<group>"; };
 		775E602529E9D88600582A62 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		775E602729E9F46100582A62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7787CC9929E86EC100167F99 /* Alpine Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpine Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7744094929EC84D800904506 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7744094A29EC84F900904506 /* StreamRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		775E602329E9D71F00582A62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		7787CC9B29E86EC100167F99 /* Alpine Music App */ = {
 			isa = PBXGroup;
 			children = (
+				7744094929EC84D800904506 /* Repositories */,
 				775E602429E9D73800582A62 /* Resources */,
 				775E602329E9D71F00582A62 /* Models */,
 				7787CCB829E87C2A00167F99 /* TableViewCells */,
@@ -223,6 +234,7 @@
 				7787CCB129E8707F00167F99 /* CustomTabBarController.swift in Sources */,
 				7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */,
 				7787CCB529E8714A00167F99 /* SettingsVC.swift in Sources */,
+				7744094B29EC84F900904506 /* StreamRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
