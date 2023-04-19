@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koV-Je-COn">
                                 <rect key="frame" x="16" y="59" width="361" height="327"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-aw-BXn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-aw-BXn">
                                 <rect key="frame" x="16" y="394" width="361" height="208"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -27,51 +27,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3G-ks-YrI">
-                                <rect key="frame" x="46" y="668" width="300" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-1P-Nd0">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tky-4T-elj">
-                                        <rect key="frame" x="75" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCw-Qf-Wrr">
-                                        <rect key="frame" x="150" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krd-qx-zht">
-                                        <rect key="frame" x="225" y="0.0" width="75" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c94-3p-Wju">
+                                <rect key="frame" x="16" y="610" width="361" height="139"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="socialCell" id="A1G-Sr-IT2" userLabel="socialCell">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1G-Sr-IT2" id="76V-Wd-HgC">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ce0-9R-lZk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="koV-Je-COn" firstAttribute="top" secondItem="Ce0-9R-lZk" secondAttribute="top" id="8FM-DX-d6e"/>
                             <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="koV-Je-COn" secondAttribute="trailing" constant="16" id="8qW-Gz-lJ7"/>
+                            <constraint firstItem="Ce0-9R-lZk" firstAttribute="bottom" secondItem="LHK-aw-BXn" secondAttribute="bottom" constant="167" id="Cvs-wE-Oaa"/>
                             <constraint firstItem="koV-Je-COn" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="16" id="K4k-LE-4Ud"/>
                             <constraint firstItem="LHK-aw-BXn" firstAttribute="top" secondItem="koV-Je-COn" secondAttribute="bottom" constant="8" symbolic="YES" id="QWN-U4-IVl"/>
-                            <constraint firstItem="Ce0-9R-lZk" firstAttribute="bottom" secondItem="n3G-ks-YrI" secondAttribute="bottom" constant="66.670000000000002" id="RDI-4Z-ujM"/>
-                            <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="n3G-ks-YrI" secondAttribute="trailing" constant="47" id="lqB-4p-S3N"/>
+                            <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="c94-3p-Wju" secondAttribute="trailing" constant="16" id="TMN-r7-eDl"/>
+                            <constraint firstItem="Ce0-9R-lZk" firstAttribute="bottom" secondItem="c94-3p-Wju" secondAttribute="bottom" constant="20" id="hpQ-3Z-HW1"/>
+                            <constraint firstItem="c94-3p-Wju" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="16" id="mKO-7P-qt5"/>
                             <constraint firstItem="LHK-aw-BXn" firstAttribute="top" secondItem="koV-Je-COn" secondAttribute="bottom" constant="8" symbolic="YES" id="qYb-Xc-zIc"/>
                             <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="LHK-aw-BXn" secondAttribute="trailing" constant="16" id="qsv-8A-MVP"/>
-                            <constraint firstItem="n3G-ks-YrI" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="46" id="tVR-ze-2Gv"/>
-                            <constraint firstItem="n3G-ks-YrI" firstAttribute="top" secondItem="LHK-aw-BXn" secondAttribute="bottom" constant="66" id="tom-id-YXm"/>
+                            <constraint firstItem="c94-3p-Wju" firstAttribute="top" secondItem="LHK-aw-BXn" secondAttribute="bottom" constant="8" symbolic="YES" id="t9l-gB-oLh"/>
                             <constraint firstItem="LHK-aw-BXn" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="16" id="zvI-pS-qBD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="person.circle.fill" catalog="system" id="GJ2-0v-t8f"/>
                     <connections>
                         <outlet property="imageView" destination="koV-Je-COn" id="qfH-Hq-Syp"/>
+                        <outlet property="socialTableView" destination="c94-3p-Wju" id="fTo-NT-3AB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54Q-ZW-Ac8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771BE82229EF6AE600E450D9 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82129EF6AE600E450D9 /* Social.swift */; };
+		771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82329F0760F00E450D9 /* SocialCell.swift */; };
+		771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82529F07DBD00E450D9 /* SocialsRepository.swift */; };
 		7744094829EC7AE900904506 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7744094729EC7AE900904506 /* Kingfisher */; };
 		7744094B29EC84F900904506 /* StreamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744094A29EC84F900904506 /* StreamRepository.swift */; };
 		775E601C29E9D3F400582A62 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601B29E9D3F400582A62 /* FirebaseAnalytics */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		771BE82129EF6AE600E450D9 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
+		771BE82329F0760F00E450D9 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
+		771BE82529F07DBD00E450D9 /* SocialsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsRepository.swift; sourceTree = "<group>"; };
 		7744094A29EC84F900904506 /* StreamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRepository.swift; sourceTree = "<group>"; };
 		775E602529E9D88600582A62 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		775E602729E9F46100582A62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				7744094A29EC84F900904506 /* StreamRepository.swift */,
+				771BE82529F07DBD00E450D9 /* SocialsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -71,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				775E602529E9D88600582A62 /* Stream.swift */,
+				771BE82129EF6AE600E450D9 /* Social.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7787CCB929E87C4100167F99 /* CurrentStreamCell.swift */,
+				771BE82329F0760F00E450D9 /* SocialCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771BE82229EF6AE600E450D9 /* Social.swift in Sources */,
 				7787CCA129E86EC100167F99 /* HomeVC.swift in Sources */,
 				7787CCBA29E87C4100167F99 /* CurrentStreamCell.swift in Sources */,
 				7787CCB329E8713900167F99 /* AboutVC.swift in Sources */,
@@ -233,8 +243,10 @@
 				7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */,
 				7787CCB129E8707F00167F99 /* CustomTabBarController.swift in Sources */,
 				7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */,
+				771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */,
 				7787CCB529E8714A00167F99 /* SettingsVC.swift in Sources */,
 				7744094B29EC84F900904506 /* StreamRepository.swift in Sources */,
+				771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
