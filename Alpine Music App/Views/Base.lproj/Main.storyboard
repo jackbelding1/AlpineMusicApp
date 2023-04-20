@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="59" width="361" height="327"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-aw-BXn">
-                                <rect key="frame" x="16" y="394" width="361" height="208"/>
+                                <rect key="frame" x="16" y="394" width="361" height="105"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -28,8 +28,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c94-3p-Wju">
-                                <rect key="frame" x="16" y="610" width="361" height="139"/>
+                                <rect key="frame" x="16" y="569" width="361" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="aEt-UH-Bex"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="socialCell" id="A1G-Sr-IT2" userLabel="socialCell">
                                         <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
@@ -47,15 +50,13 @@
                         <constraints>
                             <constraint firstItem="koV-Je-COn" firstAttribute="top" secondItem="Ce0-9R-lZk" secondAttribute="top" id="8FM-DX-d6e"/>
                             <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="koV-Je-COn" secondAttribute="trailing" constant="16" id="8qW-Gz-lJ7"/>
-                            <constraint firstItem="Ce0-9R-lZk" firstAttribute="bottom" secondItem="LHK-aw-BXn" secondAttribute="bottom" constant="167" id="Cvs-wE-Oaa"/>
+                            <constraint firstItem="c94-3p-Wju" firstAttribute="top" secondItem="LHK-aw-BXn" secondAttribute="bottom" id="HjX-Hq-VFh"/>
                             <constraint firstItem="koV-Je-COn" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="16" id="K4k-LE-4Ud"/>
                             <constraint firstItem="LHK-aw-BXn" firstAttribute="top" secondItem="koV-Je-COn" secondAttribute="bottom" constant="8" symbolic="YES" id="QWN-U4-IVl"/>
                             <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="c94-3p-Wju" secondAttribute="trailing" constant="16" id="TMN-r7-eDl"/>
                             <constraint firstItem="Ce0-9R-lZk" firstAttribute="bottom" secondItem="c94-3p-Wju" secondAttribute="bottom" constant="20" id="hpQ-3Z-HW1"/>
                             <constraint firstItem="c94-3p-Wju" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="16" id="mKO-7P-qt5"/>
-                            <constraint firstItem="LHK-aw-BXn" firstAttribute="top" secondItem="koV-Je-COn" secondAttribute="bottom" constant="8" symbolic="YES" id="qYb-Xc-zIc"/>
                             <constraint firstItem="Ce0-9R-lZk" firstAttribute="trailing" secondItem="LHK-aw-BXn" secondAttribute="trailing" constant="16" id="qsv-8A-MVP"/>
-                            <constraint firstItem="c94-3p-Wju" firstAttribute="top" secondItem="LHK-aw-BXn" secondAttribute="bottom" constant="8" symbolic="YES" id="t9l-gB-oLh"/>
                             <constraint firstItem="LHK-aw-BXn" firstAttribute="leading" secondItem="Ce0-9R-lZk" secondAttribute="leading" constant="16" id="zvI-pS-qBD"/>
                         </constraints>
                     </view>
