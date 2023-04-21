@@ -12,6 +12,12 @@ class CustomTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let image = UIImage(named: "logo.jpg")
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:(view.frame.width) / 3 , height:((navigationController?.navigationBar.frame.height)!)))
+        imageView.image = image
+        navigationController?.navigationBar.addSubview(imageView)
+        navigationController?.navigationBar.backgroundColor = UIColor.black
         selectedIndex = initialIndex
     }
 }
