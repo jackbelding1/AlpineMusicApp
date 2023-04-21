@@ -9,8 +9,13 @@ import UIKit
 
 class SettingsVC: UIViewController {
 
+    @IBOutlet weak var settingsView: UITableView!
+    let settings:[String] = ["Support Me"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingsView.delegate = self
+        settingsView.dataSource = self
     }
 
 

@@ -27,6 +27,9 @@
 		7787CCB329E8713900167F99 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CCB229E8713900167F99 /* AboutVC.swift */; };
 		7787CCB529E8714A00167F99 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CCB429E8714A00167F99 /* SettingsVC.swift */; };
 		7787CCBA29E87C4100167F99 /* CurrentStreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CCB929E87C4100167F99 /* CurrentStreamCell.swift */; };
+		77BD906329F305D000E15650 /* SupportMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BD906229F305D000E15650 /* SupportMe.storyboard */; };
+		77BD906529F305DD00E15650 /* SupportMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD906429F305DD00E15650 /* SupportMeVC.swift */; };
+		77BD906729F309FC00E15650 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD906629F309FC00E15650 /* SettingsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		7787CCB229E8713900167F99 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		7787CCB429E8714A00167F99 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		7787CCB929E87C4100167F99 /* CurrentStreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStreamCell.swift; sourceTree = "<group>"; };
+		77BD906229F305D000E15650 /* SupportMe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SupportMe.storyboard; sourceTree = "<group>"; };
+		77BD906429F305DD00E15650 /* SupportMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMeVC.swift; sourceTree = "<group>"; };
+		77BD906629F309FC00E15650 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 				7787CCA029E86EC100167F99 /* HomeVC.swift */,
 				7787CCB429E8714A00167F99 /* SettingsVC.swift */,
 				7787CCB229E8713900167F99 /* AboutVC.swift */,
+				77BD906429F305DD00E15650 /* SupportMeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 			children = (
 				7787CCA229E86EC100167F99 /* Main.storyboard */,
 				7787CCA729E86EC200167F99 /* LaunchScreen.storyboard */,
+				77BD906229F305D000E15650 /* SupportMe.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 			children = (
 				7787CCB929E87C4100167F99 /* CurrentStreamCell.swift */,
 				771BE82329F0760F00E450D9 /* SocialCell.swift */,
+				77BD906629F309FC00E15650 /* SettingsCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BD906329F305D000E15650 /* SupportMe.storyboard in Resources */,
 				7787CCA929E86EC200167F99 /* LaunchScreen.storyboard in Resources */,
 				7787CCA629E86EC200167F99 /* Assets.xcassets in Resources */,
 				775E602829E9F46100582A62 /* GoogleService-Info.plist in Resources */,
@@ -235,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BD906729F309FC00E15650 /* SettingsCell.swift in Sources */,
 				771BE82229EF6AE600E450D9 /* Social.swift in Sources */,
+				77BD906529F305DD00E15650 /* SupportMeVC.swift in Sources */,
 				7787CCA129E86EC100167F99 /* HomeVC.swift in Sources */,
 				7787CCBA29E87C4100167F99 /* CurrentStreamCell.swift in Sources */,
 				7787CCB329E8713900167F99 /* AboutVC.swift in Sources */,
