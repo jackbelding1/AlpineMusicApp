@@ -62,7 +62,7 @@ class SupportMeVC: UIViewController {
 //
 //        self.view.addSubview(button)
 //    }
-
+ 
     func listenForTransactions() -> Task<Void, Error> {
         return Task.detached {
             //Iterate through any transactions that don't come from a direct call to `purchase()`.
