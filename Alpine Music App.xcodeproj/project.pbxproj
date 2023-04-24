@@ -54,6 +54,7 @@
 		77BD906229F305D000E15650 /* SupportMe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SupportMe.storyboard; sourceTree = "<group>"; };
 		77BD906429F305DD00E15650 /* SupportMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMeVC.swift; sourceTree = "<group>"; };
 		77BD906629F309FC00E15650 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		77BD906829F32F8C00E15650 /* product.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = product.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 				7787CCA529E86EC200167F99 /* Assets.xcassets */,
 				7787CCAA29E86EC200167F99 /* Info.plist */,
 				775E602729E9F46100582A62 /* GoogleService-Info.plist */,
+				77BD906829F32F8C00E15650 /* product.storekit */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
