@@ -13,7 +13,7 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let image = UIImage(named: "logo.jpg")
-        let frameWid = (view.frame.width / 3) - 30
+        let frameWid = (view.frame.width / 3) - 60
         let imageView = UIImageView(frame: CGRect(x: (view.frame.width / 2) - (frameWid / 2), y:0,
                                                 width: frameWid,
                                                 height:((navigationController?.navigationBar.frame.height)!)))

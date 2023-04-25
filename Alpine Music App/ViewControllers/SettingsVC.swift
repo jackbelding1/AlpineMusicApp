@@ -17,7 +17,5 @@ class SettingsVC: UIViewController {
         settingsView.delegate = self
         settingsView.dataSource = self
     }
-
-
 }
 

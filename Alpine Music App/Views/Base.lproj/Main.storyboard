@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koV-Je-COn">
                                 <rect key="frame" x="16" y="137" width="361" height="249"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c94-3p-Wju">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c94-3p-Wju">
                                 <rect key="frame" x="16" y="539" width="361" height="210"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -36,10 +36,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-aw-BXn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-aw-BXn">
                                 <rect key="frame" x="16" y="383" width="361" height="156"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -87,26 +87,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08f-S1-F8W">
-                                <rect key="frame" x="0.0" y="103" width="393" height="142"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-Z9-NYe">
-                                        <rect key="frame" x="0.0" y="0.0" width="189" height="142"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="We'll be right back!">
-                                                <attributes>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-yI-Nhq">
-                                        <rect key="frame" x="189" y="0.0" width="204" height="142"/>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TxV-ea-AF5">
                                 <rect key="frame" x="0.0" y="253" width="393" height="516"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -121,16 +101,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08f-S1-F8W">
+                                <rect key="frame" x="0.0" y="114" width="393" height="131"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-Z9-NYe">
+                                        <rect key="frame" x="0.0" y="0.0" width="189" height="131"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="We'll be right back!">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-yI-Nhq">
+                                        <rect key="frame" x="189" y="0.0" width="204" height="131"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lrI-St-N20"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lrI-St-N20" firstAttribute="bottom" secondItem="TxV-ea-AF5" secondAttribute="bottom" id="9JZ-8W-btu"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="TxV-ea-AF5" secondAttribute="trailing" id="LUQ-CG-wuB"/>
-                            <constraint firstItem="08f-S1-F8W" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" id="MPi-dA-Cow"/>
                             <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="08f-S1-F8W" secondAttribute="bottom" constant="8" id="MXN-24-ck8"/>
                             <constraint firstItem="TxV-ea-AF5" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" id="bCa-ME-Lwt"/>
                             <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="150" id="dgW-GT-HCZ" userLabel="Stream View.top = Safe Area.top + 200"/>
+                            <constraint firstItem="08f-S1-F8W" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="11" id="iio-ME-tbp"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="08f-S1-F8W" secondAttribute="trailing" id="kKR-Y8-0nY"/>
                             <constraint firstItem="08f-S1-F8W" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" id="vSL-Q3-vbs"/>
                         </constraints>
