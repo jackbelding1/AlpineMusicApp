@@ -11,18 +11,21 @@ import StoreKit
 typealias RenewalState = StoreKit.Product.SubscriptionInfo.RenewalState
 
 class SupportMeVC: UIViewController {
-    @Published private(set) var subscriptions: [Product] = []
+    @Published private(set) var donations: [Product] = []
     @Published private(set) var purchasedSubscriptions: [Product] = []
     @Published private(set) var subscriptionGroupStatus: RenewalState?
-    private var isPurchased:Bool = false
     
-    private let productIds: [String] = [/*"subscription.yearly", "subscription.monthly"*/]
+    @IBOutlet weak var donationsView: UITableView!
+        
+    let cellLabels: [String] = ["💵 $0.99", "💸 $1.99", "💰 $4.99", "💳 $9.99", "💎 $19.99", "🧀 $49.99"]
+    private let productIds: [String] = ["tier.0", "tier.1", "tier.2", "tier.3", "tier.4", "tier.5"]
     
     var updateListenerTask : Task<Void, Error>? = nil
     
     override func viewDidLoad(){
         super.viewDidLoad()
-//        createButton()
+        donationsView.delegate = self
+        donationsView.dataSource = self
         updateListenerTask = listenForTransactions()
         
         Task {
@@ -35,6 +38,19 @@ class SupportMeVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateListenerTask?.cancel()
+    }
+    
+    func donate(option donationOption:Int) {
+        Task {
+            let product = donations[donationOption]
+            do {
+                if try await purchase(product) != nil {
+                    print("purchase successful")
+                }
+            } catch {
+                print("purchase failed")
+            }
+        }
     }
     
 //    @objc func buttonAction(button: UIButton) {
@@ -87,8 +103,8 @@ class SupportMeVC: UIViewController {
     func requestProducts() async {
         do {
             // request from the app store using the product ids (hardcoded)
-            subscriptions = try await Product.products(for: productIds)
-            print(subscriptions)
+            donations = try await Product.products(for: productIds)
+            print(donations)
         } catch {
             print("Failed product request from app store server: \(error)")
         }
@@ -140,7 +156,7 @@ class SupportMeVC: UIViewController {
                 
                 switch transaction.productType {
                     case .autoRenewable:
-                        if let subscription = subscriptions.first(where: {$0.id == transaction.productID}) {
+                        if let subscription = donations.first(where: {$0.id == transaction.productID}) {
                             purchasedSubscriptions.append(subscription)
                         }
                     default:

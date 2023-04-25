@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77118B5F29F8350B00C63F0C /* DonationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77118B5E29F8350B00C63F0C /* DonationCell.swift */; };
 		771BE82229EF6AE600E450D9 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82129EF6AE600E450D9 /* Social.swift */; };
 		771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82329F0760F00E450D9 /* SocialCell.swift */; };
 		771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82529F07DBD00E450D9 /* SocialsRepository.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77118B5E29F8350B00C63F0C /* DonationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCell.swift; sourceTree = "<group>"; };
 		771BE82129EF6AE600E450D9 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
 		771BE82329F0760F00E450D9 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
 		771BE82529F07DBD00E450D9 /* SocialsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsRepository.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				7787CCB929E87C4100167F99 /* CurrentStreamCell.swift */,
 				771BE82329F0760F00E450D9 /* SocialCell.swift */,
 				77BD906629F309FC00E15650 /* SettingsCell.swift */,
+				77118B5E29F8350B00C63F0C /* DonationCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				77BD906529F305DD00E15650 /* SupportMeVC.swift in Sources */,
 				7787CCA129E86EC100167F99 /* HomeVC.swift in Sources */,
 				7787CCBA29E87C4100167F99 /* CurrentStreamCell.swift in Sources */,
+				77118B5F29F8350B00C63F0C /* DonationCell.swift in Sources */,
 				7787CCB329E8713900167F99 /* AboutVC.swift in Sources */,
 				775E602629E9D88600582A62 /* Stream.swift in Sources */,
 				7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */,
