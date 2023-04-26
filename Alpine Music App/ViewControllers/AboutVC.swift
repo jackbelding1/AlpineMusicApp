@@ -19,7 +19,6 @@ class AboutVC: UIViewController {
         fetchSocials()
         socialTableView.delegate = self
         socialTableView.dataSource = self
-        imageView.image = UIImage(named: "logo.jpg")
     }
 
     func fetchSocials() {
