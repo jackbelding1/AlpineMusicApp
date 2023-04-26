@@ -11,6 +11,7 @@ import AVKit
 class HomeVC: UIViewController {
     
     @IBOutlet var streamView: UITableView!
+    @IBOutlet weak var currentStreamView: UIImageView!
     
     @Published var streams = [Stream]()
     let player = AVPlayer()
