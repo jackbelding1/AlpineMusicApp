@@ -21,7 +21,9 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        divider.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: (navigationController?.navigationBar.frame.height)!)
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(streamViewTapped(tapGestureRecognizer:)))
         currentStreamView.isUserInteractionEnabled = true
         currentStreamView.addGestureRecognizer(tapGestureRecognizer)
@@ -35,8 +37,6 @@ class HomeVC: UIViewController {
     }
     
     @objc func streamViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-        let tappedImage = tapGestureRecognizer.view as! UIImageView
-        
         // open stream view with stream channel playback url
         let playerItem = AVPlayerItem(url: URL(string: "https://c1c3ba7f553a.us-east-1.playback.live-video.net/api/video/v1/us-east-1.080740216434.channel.a1p4kxOjkwVx.m3u8")!)
         player.replaceCurrentItem(with: playerItem)

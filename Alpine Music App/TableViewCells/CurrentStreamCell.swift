@@ -42,6 +42,7 @@ extension HomeVC: UITableViewDataSource {
             }
         }
         cell.textLabel?.text = streams[indexPath.row].title
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
     

@@ -11,6 +11,8 @@ class AboutVC: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var socialTableView: UITableView!
+    
+    
     @Published var socials:[Social] = [Social]()
     private let socialsRepository: SocialsRepositoryProtocol = SocialsRepository()
     
