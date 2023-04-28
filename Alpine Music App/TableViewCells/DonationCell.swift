@@ -10,6 +10,7 @@ import UIKit
 extension SupportMeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         donate(option: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -26,6 +27,7 @@ extension SupportMeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = donationsView.dequeueReusableCell(withIdentifier: "donationCell", for: indexPath)
         cell.textLabel?.text = cellLabels[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
 }
