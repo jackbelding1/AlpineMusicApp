@@ -17,8 +17,8 @@ extension AboutVC: UITableViewDelegate {
         } else {
             print("Can't open social url \(socials[indexPath.row].socialUrl)")
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
 
 extension AboutVC: UITableViewDataSource {
@@ -29,6 +29,7 @@ extension AboutVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return socials.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = socialTableView.dequeueReusableCell(withIdentifier: "socialCell", for: indexPath)
@@ -44,6 +45,7 @@ extension AboutVC: UITableViewDataSource {
             }
         }
         cell.textLabel?.text = socials[indexPath.row].socialCellText
+        cell.textLabel?.textColor = UIColor.white
         return cell
     }
 }

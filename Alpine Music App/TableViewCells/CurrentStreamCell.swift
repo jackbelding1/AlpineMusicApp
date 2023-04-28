@@ -17,6 +17,7 @@ extension HomeVC: UITableViewDelegate {
 
             self.player.play()
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
