@@ -82,9 +82,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08f-S1-F8W">
+                                <rect key="frame" x="0.0" y="114" width="393" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stream Now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-Z9-NYe">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Ihm-Ot-9Hy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="afk" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-yI-Nhq">
+                                        <rect key="frame" x="208" y="0.0" width="185" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="185" id="c6e-Ek-pHV"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TxV-ea-AF5">
-                                <rect key="frame" x="0.0" y="253" width="393" height="516"/>
+                                <rect key="frame" x="0.0" y="379" width="393" height="390"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="390" id="hsr-Nw-7KC"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="currentStreamCell" id="R69-0j-d7f">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -96,39 +118,48 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08f-S1-F8W">
-                                <rect key="frame" x="0.0" y="114" width="393" height="131"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be right back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsj-Z9-NYe">
-                                        <rect key="frame" x="0.0" y="0.0" width="208" height="131"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="afk" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-yI-Nhq">
-                                        <rect key="frame" x="208" y="0.0" width="185" height="131"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="185" id="c6e-Ek-pHV"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzH-Yl-HM7">
+                                <rect key="frame" x="0.0" y="270" width="393" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="EXC-yD-iUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRd-8M-CPV">
+                                <rect key="frame" x="130" y="334" width="121" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145.66999999999999" id="IHd-rT-7TI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lrI-St-N20"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZRd-8M-CPV" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" constant="130" id="1q4-Zf-RAo"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="bottom" secondItem="TxV-ea-AF5" secondAttribute="bottom" id="9JZ-8W-btu"/>
+                            <constraint firstItem="RzH-Yl-HM7" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" id="Bjy-li-520"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="TxV-ea-AF5" secondAttribute="trailing" id="LUQ-CG-wuB"/>
-                            <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="08f-S1-F8W" secondAttribute="bottom" constant="8" id="MXN-24-ck8"/>
+                            <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="RzH-Yl-HM7" secondAttribute="trailing" id="TGb-ou-n7L"/>
                             <constraint firstItem="TxV-ea-AF5" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" id="bCa-ME-Lwt"/>
-                            <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="150" id="dgW-GT-HCZ" userLabel="Stream View.top = Safe Area.top + 200"/>
-                            <constraint firstItem="08f-S1-F8W" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="11" id="iio-ME-tbp"/>
+                            <constraint firstItem="08f-S1-F8W" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="11" id="iio-ME-tbp" userLabel="Stack View.top = Safe Area.top "/>
+                            <constraint firstItem="ZRd-8M-CPV" firstAttribute="top" secondItem="RzH-Yl-HM7" secondAttribute="bottom" constant="22" id="io1-eR-uMr"/>
+                            <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="ZRd-8M-CPV" secondAttribute="bottom" constant="24.5" id="j9h-mL-6ak"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="08f-S1-F8W" secondAttribute="trailing" id="kKR-Y8-0nY"/>
+                            <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="ZRd-8M-CPV" secondAttribute="trailing" constant="142" id="kyI-DM-3Xs"/>
                             <constraint firstItem="08f-S1-F8W" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" id="vSL-Q3-vbs"/>
+                            <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="ZRd-8M-CPV" secondAttribute="bottom" constant="24.670000000000002" id="yVv-tn-Vdc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="9qx-MU-KzK"/>
                     <connections>
                         <outlet property="currentStreamView" destination="Zee-yI-Nhq" id="iXd-ZX-7bt"/>
+                        <outlet property="divider" destination="RzH-Yl-HM7" id="SDh-Ki-mj5"/>
                         <outlet property="streamView" destination="TxV-ea-AF5" id="sOy-WI-KVN"/>
                     </connections>
                 </viewController>
