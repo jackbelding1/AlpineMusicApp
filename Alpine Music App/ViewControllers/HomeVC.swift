@@ -11,8 +11,8 @@ import AVKit
 class HomeVC: UIViewController {
     
     @IBOutlet var streamView: UITableView!
-    @IBOutlet weak var currentStreamView: UIImageView!
-    @IBOutlet weak var divider: UILabel!
+    @IBOutlet weak var currentStreamView: UIStackView!
+    
     
     @Published var streams = [Stream]()
     let player = AVPlayer()
@@ -22,7 +22,6 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        divider.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: (navigationController?.navigationBar.frame.height)!)
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(streamViewTapped(tapGestureRecognizer:)))
         currentStreamView.isUserInteractionEnabled = true
