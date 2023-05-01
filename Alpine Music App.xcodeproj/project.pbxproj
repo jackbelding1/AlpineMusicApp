@@ -31,6 +31,7 @@
 		77BD906329F305D000E15650 /* SupportMe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BD906229F305D000E15650 /* SupportMe.storyboard */; };
 		77BD906529F305DD00E15650 /* SupportMeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD906429F305DD00E15650 /* SupportMeVC.swift */; };
 		77BD906729F309FC00E15650 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BD906629F309FC00E15650 /* SettingsCell.swift */; };
+		77F083542A004A0200C48994 /* StoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F083532A004A0200C48994 /* StoreRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		77BD906429F305DD00E15650 /* SupportMeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMeVC.swift; sourceTree = "<group>"; };
 		77BD906629F309FC00E15650 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		77BD906829F32F8C00E15650 /* product.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = product.storekit; sourceTree = "<group>"; };
+		77F083532A004A0200C48994 /* StoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				7744094A29EC84F900904506 /* StreamRepository.swift */,
 				771BE82529F07DBD00E450D9 /* SocialsRepository.swift */,
+				77F083532A004A0200C48994 /* StoreRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */,
 				771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */,
 				7787CCB529E8714A00167F99 /* SettingsVC.swift in Sources */,
+				77F083542A004A0200C48994 /* StoreRepository.swift in Sources */,
 				7744094B29EC84F900904506 /* StreamRepository.swift in Sources */,
 				771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */,
 			);
