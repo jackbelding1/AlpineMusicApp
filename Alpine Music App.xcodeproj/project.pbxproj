@@ -13,6 +13,7 @@
 		771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82529F07DBD00E450D9 /* SocialsRepository.swift */; };
 		7744094829EC7AE900904506 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7744094729EC7AE900904506 /* Kingfisher */; };
 		7744094B29EC84F900904506 /* StreamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744094A29EC84F900904506 /* StreamRepository.swift */; };
+		774CF3DC2A01B054007BB528 /* PrivacyWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CF3DB2A01B054007BB528 /* PrivacyWebViewViewController.swift */; };
 		775E601C29E9D3F400582A62 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601B29E9D3F400582A62 /* FirebaseAnalytics */; };
 		775E601E29E9D3F400582A62 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601D29E9D3F400582A62 /* FirebaseFirestore */; };
 		775E602029E9D3F400582A62 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 775E601F29E9D3F400582A62 /* FirebaseFirestoreSwift */; };
@@ -40,6 +41,7 @@
 		771BE82329F0760F00E450D9 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
 		771BE82529F07DBD00E450D9 /* SocialsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsRepository.swift; sourceTree = "<group>"; };
 		7744094A29EC84F900904506 /* StreamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRepository.swift; sourceTree = "<group>"; };
+		774CF3DB2A01B054007BB528 /* PrivacyWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyWebViewViewController.swift; sourceTree = "<group>"; };
 		775E602529E9D88600582A62 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		775E602729E9F46100582A62 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7787CC9929E86EC100167F99 /* Alpine Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpine Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				7787CCB429E8714A00167F99 /* SettingsViewController.swift */,
 				7787CCB229E8713900167F99 /* AboutViewController.swift */,
 				77BD906429F305DD00E15650 /* SupportMeViewController.swift */,
+				774CF3DB2A01B054007BB528 /* PrivacyWebViewViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				77118B5F29F8350B00C63F0C /* DonationCell.swift in Sources */,
 				7787CCB329E8713900167F99 /* AboutViewController.swift in Sources */,
 				775E602629E9D88600582A62 /* Stream.swift in Sources */,
+				774CF3DC2A01B054007BB528 /* PrivacyWebViewViewController.swift in Sources */,
 				7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */,
 				7787CCB129E8707F00167F99 /* CustomTabBarController.swift in Sources */,
 				7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */,
