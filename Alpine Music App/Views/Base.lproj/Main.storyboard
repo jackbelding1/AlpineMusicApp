@@ -124,7 +124,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Streams" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRd-8M-CPV">
-                                <rect key="frame" x="20" y="329.66666666666669" width="215" height="58"/>
+                                <rect key="frame" x="20" y="330" width="373" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145.66999999999999" id="IHd-rT-7TI"/>
                                 </constraints>
@@ -136,14 +136,15 @@
                         <viewLayoutGuide key="safeArea" id="lrI-St-N20"/>
                         <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="ZRd-8M-CPV" secondAttribute="trailing" id="3QJ-i7-AXq"/>
                             <constraint firstItem="A19-DJ-Lve" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="42" id="5UJ-qZ-BGS"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="bottom" secondItem="TxV-ea-AF5" secondAttribute="bottom" id="9JZ-8W-btu"/>
                             <constraint firstItem="A19-DJ-Lve" firstAttribute="top" secondItem="0n1-wN-v3X" secondAttribute="bottom" constant="10" id="BUQ-bf-7bL"/>
-                            <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="ZRd-8M-CPV" secondAttribute="trailing" constant="158" id="E0z-zG-rxi"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="TxV-ea-AF5" secondAttribute="trailing" id="LUQ-CG-wuB"/>
                             <constraint firstItem="A19-DJ-Lve" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" constant="20" id="MC4-Ze-pMl"/>
                             <constraint firstItem="lrI-St-N20" firstAttribute="trailing" secondItem="0n1-wN-v3X" secondAttribute="trailing" constant="197" id="NBE-uC-3SS"/>
                             <constraint firstItem="TxV-ea-AF5" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" id="bCa-ME-Lwt"/>
+                            <constraint firstItem="TxV-ea-AF5" firstAttribute="top" secondItem="ZRd-8M-CPV" secondAttribute="bottom" constant="8" symbolic="YES" id="cLa-5a-k21"/>
                             <constraint firstItem="0n1-wN-v3X" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" constant="20" id="dio-0W-iSH"/>
                             <constraint firstItem="0n1-wN-v3X" firstAttribute="top" secondItem="lrI-St-N20" secondAttribute="top" constant="13" id="er1-fp-p0U"/>
                             <constraint firstItem="ZRd-8M-CPV" firstAttribute="leading" secondItem="lrI-St-N20" secondAttribute="leading" constant="20" id="fdd-oe-7bh"/>

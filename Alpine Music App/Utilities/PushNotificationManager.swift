@@ -58,6 +58,9 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
       }
 
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        Messaging.messaging().subscribe(toTopic: "topic") { error in
+          print("Subscribed to topic topic")
+        }
         updateFirestorePushTokenIfNeeded()
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
