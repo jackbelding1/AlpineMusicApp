@@ -9,9 +9,21 @@ import UIKit
 
 extension SettingsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: settings[indexPath.row].replacingOccurrences(of: " ", with: ""), bundle: nil)
-        let vc = storyboard.instantiateInitialViewController()!
-        self.present(vc, animated: true, completion: nil)
+        let cell = settings[indexPath.row]
+        switch cell {
+            case "Support Me":
+                let storyboard = UIStoryboard(name: cell.replacingOccurrences(of: " ", with: ""), bundle: nil)
+                let vc = storyboard.instantiateInitialViewController()!
+                self.present(vc, animated: true, completion: nil)
+            case "Privacy Policy":
+                let myURL = URL(string:"https://www.alpinemusic.app/privacy/")
+                let vc = PrivacyWebViewViewController(url: myURL!, title: "Privacy Policy")
+                let navVC = UINavigationController(rootViewController: vc)
+                present(navVC, animated: true)
+                break
+            default:
+                break
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

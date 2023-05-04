@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import WebKit
 
-class SettingsVC: UIViewController {
+class SettingsVC: UIViewController, WKUIDelegate {
 
     @IBOutlet weak var settingsView: UITableView!
-    let settings:[String] = ["Support Me"]
+    let settings:[String] = ["Support Me", "Privacy Policy"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
