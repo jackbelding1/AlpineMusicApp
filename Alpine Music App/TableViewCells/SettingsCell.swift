@@ -20,6 +20,8 @@ extension SettingsVC: UITableViewDelegate {
                 let vc = PrivacyWebViewViewController(url: myURL!, title: "Privacy Policy")
                 let navVC = UINavigationController(rootViewController: vc)
                 present(navVC, animated: true)
+            case "Notifications":
+                print("notifications")
                 break
             default:
                 break
@@ -31,6 +33,10 @@ extension SettingsVC: UITableViewDelegate {
 extension SettingsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

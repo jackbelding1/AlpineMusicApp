@@ -19,6 +19,7 @@
 		774CF3E42A02E1DE007BB528 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 774CF3E32A02E1DE007BB528 /* FirebaseFirestoreSwift */; };
 		774CF3E62A02E1DE007BB528 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 774CF3E52A02E1DE007BB528 /* FirebaseMessaging */; };
 		774CF3EB2A030125007BB528 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774CF3EA2A030125007BB528 /* GoogleService-Info.plist */; };
+		77558A832A045F9900A539BC /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77558A822A045F9900A539BC /* AVPlayerManager.swift */; };
 		775E602629E9D88600582A62 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E602529E9D88600582A62 /* Stream.swift */; };
 		7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9C29E86EC100167F99 /* AppDelegate.swift */; };
 		7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9E29E86EC100167F99 /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 		774CF3DE2A02E127007BB528 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		774CF3E92A02F9B9007BB528 /* Alpine Music App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alpine Music App.entitlements"; sourceTree = "<group>"; };
 		774CF3EA2A030125007BB528 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77558A822A045F9900A539BC /* AVPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerManager.swift; sourceTree = "<group>"; };
 		775E602529E9D88600582A62 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		7787CC9929E86EC100167F99 /* Alpine Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpine Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7787CC9C29E86EC100167F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				774CF3DE2A02E127007BB528 /* PushNotificationManager.swift */,
+				77558A822A045F9900A539BC /* AVPlayerManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */,
 				7787CCB529E8714A00167F99 /* SettingsViewController.swift in Sources */,
 				77F083542A004A0200C48994 /* StoreRepository.swift in Sources */,
+				77558A832A045F9900A539BC /* AVPlayerManager.swift in Sources */,
 				7744094B29EC84F900904506 /* StreamRepository.swift in Sources */,
 				771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */,
 			);

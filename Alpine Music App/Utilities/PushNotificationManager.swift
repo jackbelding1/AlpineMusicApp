@@ -64,7 +64,18 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
         updateFirestorePushTokenIfNeeded()
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print(response)
+        let application = UIApplication.shared
+        
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+
+            AVPlayerManager.shared.playLiveStream(topController)
+        }
+        completionHandler()
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
