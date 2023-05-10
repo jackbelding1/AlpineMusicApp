@@ -13,7 +13,6 @@ class SettingsVC: UIViewController, WKUIDelegate {
     @IBOutlet weak var settingsView: UITableView!
     let settings:[String] = ["Support Me", "Privacy Policy"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsView.delegate = self

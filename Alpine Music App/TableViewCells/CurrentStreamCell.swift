@@ -11,12 +11,9 @@ import AVFoundation
 
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let playerItem = AVPlayerItem(url: URL(string: streams[indexPath.row].url)!)
-        player.replaceCurrentItem(with: playerItem)
-        present(PlayerController, animated: true) {
-
-            self.player.play()
-        }
+        AVPlayerManager.shared.playStream(withURL:
+                                            URL(string: streams[indexPath.row].url)!,
+                                            self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

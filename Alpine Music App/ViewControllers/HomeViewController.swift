@@ -37,12 +37,7 @@ class HomeVC: UIViewController {
     
     @objc func streamViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         // open stream view with stream channel playback url
-        let playerItem = AVPlayerItem(url: URL(string: "https://c1c3ba7f553a.us-east-1.playback.live-video.net/api/video/v1/us-east-1.080740216434.channel.a1p4kxOjkwVx.m3u8")!)
-        player.replaceCurrentItem(with: playerItem)
-        present(PlayerController, animated: true) {
-            
-            self.player.play()
-        }
+        AVPlayerManager.shared.playLiveStream(self)
     }
     
     func fetchStreams() {

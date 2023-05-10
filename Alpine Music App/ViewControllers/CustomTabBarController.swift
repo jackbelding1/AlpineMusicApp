@@ -12,14 +12,14 @@ class CustomTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let image = UIImage(named: "logo-removebg.png")
-        let frameWid = (view.frame.width / 3) - 60
-        let imageView = UIImageView(frame: CGRect(x: (view.frame.width / 2) - (frameWid / 2), y:0,
-                                                width: frameWid,
-                                                height:((navigationController?.navigationBar.frame.height)!)))
-//        imageView.image = image
-        navigationController?.navigationBar.addSubview(imageView)
-        navigationController?.navigationBar.backgroundColor = UIColor.clear
+//        let image = UIImage(named: "logo-removebg.png")
+//        let frameWid = (view.frame.width / 3) - 60
+//        let imageView = UIImageView(frame: CGRect(x: (view.frame.width / 2) - (frameWid / 2), y:0,
+//                                                width: frameWid,
+//                                                height:((navigationController?.navigationBar.frame.height)!)))
+////        imageView.image = image
+//        navigationController?.navigationBar.addSubview(imageView)
+//        navigationController?.navigationBar.backgroundColor = UIColor.clear
         selectedIndex = initialIndex
     }
 }
