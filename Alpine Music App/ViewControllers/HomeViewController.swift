@@ -9,20 +9,19 @@ import UIKit
 import AVKit
 
 class HomeVC: UIViewController {
-    
+    // table of previous streams
     @IBOutlet var streamView: UITableView!
+    // live stream view
     @IBOutlet weak var currentStreamView: UIStackView!
-    
-    
+    // previous stream objects to be displayed
     @Published var streams = [Stream]()
-    let player = AVPlayer()
-    let playerController = AVPlayerViewController()
+    // streams networking object
     private let streamsRepository: StreamsRepositoryProtocol = StreamsRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // set tap handler for livestream view
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(streamViewTapped(tapGestureRecognizer:)))
         currentStreamView.isUserInteractionEnabled = true
         currentStreamView.addGestureRecognizer(tapGestureRecognizer)
@@ -31,8 +30,6 @@ class HomeVC: UIViewController {
         
         streamView.delegate = self
         streamView.dataSource = self
-        
-        playerController.player = player
     }
     
     @objc func streamViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -40,6 +37,7 @@ class HomeVC: UIViewController {
         AVPlayerManager.shared.playLiveStream(self)
     }
     
+    // load streams from firebase
     func fetchStreams() {
         Task {
             do {

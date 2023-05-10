@@ -7,9 +7,13 @@
 
 import Foundation
 
+// object representing a social media cell
 struct Social: Codable {
+    // the url for the social media icon
     var imgUrl:String
+    // the text for the social media cell
     var socialCellText:String
+    // the url for the social media link
     var socialUrl:String
 }
 

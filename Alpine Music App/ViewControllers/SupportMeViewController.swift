@@ -10,11 +10,13 @@ import StoreKit
 
 
 class SupportMeVC: UIViewController {
+    // table of donations options
     @IBOutlet weak var donationsView: UITableView!
-        
+    // donation option labels
     let cellLabels: [String] = ["💵 $0.99", "💸 $1.99", "💰 $4.99", "💳 $9.99", "💎 $19.99", "🧀 $49.99"]
-    
+    // store kit networking object
     let storeRepository: StoreRepositoryProtocol = StoreRepository()
+    // transaction listener
     var updateListenerTask : Task<Void, Error>? = nil
     
     override func viewDidLoad(){
@@ -22,7 +24,7 @@ class SupportMeVC: UIViewController {
         donationsView.delegate = self
         donationsView.dataSource = self
         updateListenerTask = storeRepository.listenForTransactions()
-        
+        // initialize store for user
         Task {
             await storeRepository.requestProducts()
             await storeRepository.updateCustomerProductStatus()

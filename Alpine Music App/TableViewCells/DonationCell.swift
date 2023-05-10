@@ -9,6 +9,7 @@ import UIKit
 
 extension SupportMeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // donate selected amount
         storeRepository.donate(option: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }

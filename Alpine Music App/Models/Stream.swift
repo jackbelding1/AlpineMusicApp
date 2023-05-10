@@ -7,9 +7,13 @@
 
 import Foundation
 
+// object representing a pre recorded stream fetched from firebase
 struct Stream: Codable {
+    // url for stream thumbnail
     var thumbnailUrl:String
+    // the title to display
     var title: String
+    // the stream URL
     var url:String
 }
 

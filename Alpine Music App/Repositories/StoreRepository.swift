@@ -19,12 +19,14 @@ protocol StoreRepositoryProtocol {
 }
 
 class StoreRepository: StoreRepositoryProtocol {
+    // donations specified in product file
     @Published private(set) var donations: [Product] = []
+    // purchased auto renewable subscriptions (deprecated)
     @Published private(set) var purchasedSubscriptions: [Product] = []
-    @Published private(set) var subscriptionGroupStatus: RenewalState?
-    
+    // the ids specified in the product file
     private let productIds: [String] = ["tier.0", "tier.1", "tier.2", "tier.3", "tier.4", "tier.5"]
 
+    // handle user select donation cell
     func donate(option donationOption:Int) {
         Task {
             let product = donations[donationOption]
@@ -38,6 +40,7 @@ class StoreRepository: StoreRepositoryProtocol {
         }
     }
  
+    // verify for transactions
     func listenForTransactions() -> Task<Void, Error> {
         return Task.detached {
             //Iterate through any transactions that don't come from a direct call to `purchase()`.
@@ -54,8 +57,6 @@ class StoreRepository: StoreRepositoryProtocol {
             }
         }
     }
-    
-    
     
     // Request the products
     @MainActor
@@ -94,6 +95,7 @@ class StoreRepository: StoreRepositoryProtocol {
         }
     }
     
+    // check for verification
     func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
         //Check whether the JWS passes StoreKit verification.
         switch result {
@@ -106,6 +108,7 @@ class StoreRepository: StoreRepositoryProtocol {
         }
     }
     
+    // check for auto renewable subscriptions (deprecated)
     @MainActor
     func updateCustomerProductStatus() async {
         for await result in Transaction.currentEntitlements {
@@ -130,6 +133,7 @@ class StoreRepository: StoreRepositoryProtocol {
     }
 }
 
+// store kit errors
 public enum StoreError: Error {
     case failedVerification
 }

@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 class PrivacyWebViewViewController: UIViewController {
-    
+    // the webview to be displayed
     private let webView: WKWebView = {
         let preferences = WKWebpagePreferences()
         preferences.allowsContentJavaScript = true
@@ -18,7 +18,7 @@ class PrivacyWebViewViewController: UIViewController {
         let webView = WKWebView(frame: .zero, configuration: configuration)
         return webView
     }()
-    
+    // the url to open in the webview
     private let url: URL
     
     init(url: URL, title: String) {

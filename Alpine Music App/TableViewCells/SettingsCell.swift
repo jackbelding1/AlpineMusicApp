@@ -12,17 +12,16 @@ extension SettingsVC: UITableViewDelegate {
         let cell = settings[indexPath.row]
         switch cell {
             case "Support Me":
+            // present user with support me pop over
                 let storyboard = UIStoryboard(name: cell.replacingOccurrences(of: " ", with: ""), bundle: nil)
                 let vc = storyboard.instantiateInitialViewController()!
                 self.present(vc, animated: true, completion: nil)
             case "Privacy Policy":
+            // open privacy policy link
                 let myURL = URL(string:"https://www.alpinemusic.app/privacy/")
                 let vc = PrivacyWebViewViewController(url: myURL!, title: "Privacy Policy")
                 let navVC = UINavigationController(rootViewController: vc)
                 present(navVC, animated: true)
-            case "Notifications":
-                print("notifications")
-                break
             default:
                 break
         }

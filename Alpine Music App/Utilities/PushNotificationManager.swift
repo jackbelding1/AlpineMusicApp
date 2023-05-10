@@ -10,12 +10,17 @@ import FirebaseFirestore
 import FirebaseMessaging
 import UIKit
 import UserNotifications
+
 class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCenterDelegate {
+    // id for firebase messanger
     let userID: String
+    
     init(userID: String) {
         self.userID = userID
         super.init()
     }
+    
+    // register the user to recieve push notifications
     func registerForPushNotifications() {
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
@@ -34,21 +39,20 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
         UIApplication.shared.registerForRemoteNotifications()
         updateFirestorePushTokenIfNeeded()
     }
+    
+    // update user firebase token
     func updateFirestorePushTokenIfNeeded() {
         if let token = Messaging.messaging().fcmToken {
             let usersRef = Firestore.firestore().collection("users_table").document(userID)
             usersRef.setData(["fcmToken": token], merge: true)
         }
     }
+    
+    // handle notification
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                   willPresent notification: UNNotification) async
         -> UNNotificationPresentationOptions {
         let userInfo = notification.request.content.userInfo
-
-        // With swizzling disabled you must let Messaging know about the message, for Analytics
-         Messaging.messaging().appDidReceiveMessage(userInfo)
-
-        // ...
 
         // Print full message.
         print(userInfo)
@@ -57,17 +61,24 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
         return [[.alert, .sound]]
       }
 
+    // completion handler for successful registration token fetch
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        // subscribe user to general topic to recieve notifications
         Messaging.messaging().subscribe(toTopic: "topic") { error in
           print("Subscribed to topic topic")
         }
         updateFirestorePushTokenIfNeeded()
     }
+    
+    // handle user tap notification
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        let application = UIApplication.shared
-        
+        //
+        // TODO: refactor keywindow
+        //
+        // grab the window
         let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
 
+        // open live stream view
         if var topController = keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {
                 topController = presentedViewController
@@ -77,9 +88,4 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
         }
         completionHandler()
     }
-    
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-            Messaging.messaging().setAPNSToken(deviceToken, type: .unknown)
-        print("recieved response")
-        }
 }

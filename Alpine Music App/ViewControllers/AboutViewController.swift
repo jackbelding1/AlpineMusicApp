@@ -8,11 +8,11 @@
 import UIKit
 
 class AboutVC: UIViewController {
-
+    // image for about me screen
     @IBOutlet weak var imageView: UIImageView!
+    // table of social media links
     @IBOutlet weak var socialTableView: UITableView!
-    
-    
+    // social media objects to be displayed
     @Published var socials:[Social] = [Social]()
     private let socialsRepository: SocialsRepositoryProtocol = SocialsRepository()
     
@@ -23,6 +23,7 @@ class AboutVC: UIViewController {
         socialTableView.dataSource = self
     }
 
+    // fetch social media objects from firebase
     func fetchSocials() {
         Task {
             do {
