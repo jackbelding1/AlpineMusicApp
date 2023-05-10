@@ -11,7 +11,10 @@ import Kingfisher
 
 extension AboutVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // get url link
         let socialUrl = URL(string: socials[indexPath.row].socialUrl)!
+        
+        // open social media URL
         if UIApplication.shared.canOpenURL(socialUrl){
             UIApplication.shared.open(socialUrl)
         } else {

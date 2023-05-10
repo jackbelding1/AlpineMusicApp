@@ -8,10 +8,12 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
+    // open to homescreen
     @IBInspectable var initialIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // create banner (deprecated)
 //        let image = UIImage(named: "logo-removebg.png")
 //        let frameWid = (view.frame.width / 3) - 60
 //        let imageView = UIImageView(frame: CGRect(x: (view.frame.width / 2) - (frameWid / 2), y:0,

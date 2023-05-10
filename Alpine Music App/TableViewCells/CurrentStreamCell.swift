@@ -11,6 +11,7 @@ import AVFoundation
 
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // play the stream for the selected cell
         AVPlayerManager.shared.playStream(withURL:
                                             URL(string: streams[indexPath.row].url)!,
                                             self)

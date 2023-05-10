@@ -10,7 +10,9 @@ import WebKit
 
 class SettingsVC: UIViewController, WKUIDelegate {
 
+    // the table of app settings/more
     @IBOutlet weak var settingsView: UITableView!
+    // the setting cells to be displayed
     let settings:[String] = ["Support Me", "Privacy Policy"]
     
     override func viewDidLoad() {

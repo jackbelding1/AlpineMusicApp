@@ -14,8 +14,10 @@ protocol StreamsRepositoryProtocol {
 }
 
 struct StreamsRepository: StreamsRepositoryProtocol {
+    // firebase reference for previous streams
     let streamsReference = Firestore.firestore().collection("streams")
     
+    // fetch streams from firebase collection
     func fetchStreams() async throws -> [Stream] {
         let snapshot = try await streamsReference.getDocuments()
         let streams = snapshot.documents.map { document in
