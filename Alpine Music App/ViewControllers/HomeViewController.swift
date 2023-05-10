@@ -16,7 +16,7 @@ class HomeVC: UIViewController {
     
     @Published var streams = [Stream]()
     let player = AVPlayer()
-    let PlayerController = AVPlayerViewController()
+    let playerController = AVPlayerViewController()
     private let streamsRepository: StreamsRepositoryProtocol = StreamsRepository()
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class HomeVC: UIViewController {
         streamView.delegate = self
         streamView.dataSource = self
         
-        PlayerController.player = player
+        playerController.player = player
     }
     
     @objc func streamViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
