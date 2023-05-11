@@ -1,6 +1,6 @@
 # Alpine Music App
 
-This is a native iOS app designed for DJs to live stream to their fans, display previous streams, and promote and monetize their brand. The app leverages Apple's StoreKit, AVKit, UIKit, and Apple Push Notification Services. It also leverages the Swift packaged KingFisher, Google Firebase Firestore, and Firebase Messenger.
+This is a native iOS app designed for DJs to live stream to their fans, display previous streams, and promote and monetize their brand. The app leverages Apple's StoreKit, AVKit, UIKit, and Apple Push Notification Services. It also leverages the Swift packages KingFisher, Firebase Firestore, and Firebase Messenger.
 
 ## Features
 
