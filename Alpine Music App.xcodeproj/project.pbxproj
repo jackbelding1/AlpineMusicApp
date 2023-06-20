@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7710FB382A4226D2002706DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7710FB372A4226D2002706DF /* GoogleService-Info.plist */; };
+		7710FB402A42277C002706DF /* Alpine_Music_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710FB3F2A42277C002706DF /* Alpine_Music_AppTests.swift */; };
+		7710FB4D2A422974002706DF /* Alpine_Music_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710FB4C2A422974002706DF /* Alpine_Music_AppUITests.swift */; };
+		7710FB4F2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710FB4E2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift */; };
 		77118B5F29F8350B00C63F0C /* DonationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77118B5E29F8350B00C63F0C /* DonationCell.swift */; };
 		771BE82229EF6AE600E450D9 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82129EF6AE600E450D9 /* Social.swift */; };
 		771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82329F0760F00E450D9 /* SocialCell.swift */; };
@@ -18,7 +22,6 @@
 		774CF3E22A02E1DE007BB528 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 774CF3E12A02E1DE007BB528 /* FirebaseFirestore */; };
 		774CF3E42A02E1DE007BB528 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 774CF3E32A02E1DE007BB528 /* FirebaseFirestoreSwift */; };
 		774CF3E62A02E1DE007BB528 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 774CF3E52A02E1DE007BB528 /* FirebaseMessaging */; };
-		774CF3EB2A030125007BB528 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774CF3EA2A030125007BB528 /* GoogleService-Info.plist */; };
 		77558A832A045F9900A539BC /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77558A822A045F9900A539BC /* AVPlayerManager.swift */; };
 		775E602629E9D88600582A62 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E602529E9D88600582A62 /* Stream.swift */; };
 		7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9C29E86EC100167F99 /* AppDelegate.swift */; };
@@ -37,7 +40,30 @@
 		77F083542A004A0200C48994 /* StoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F083532A004A0200C48994 /* StoreRepository.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7710FB412A42277C002706DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7787CC9129E86EC100167F99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7787CC9829E86EC100167F99;
+			remoteInfo = "Alpine Music App";
+		};
+		7710FB502A422974002706DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7787CC9129E86EC100167F99 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7787CC9829E86EC100167F99;
+			remoteInfo = "Alpine Music App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7710FB372A4226D2002706DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7710FB3D2A42277C002706DF /* Alpine Music AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alpine Music AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7710FB3F2A42277C002706DF /* Alpine_Music_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpine_Music_AppTests.swift; sourceTree = "<group>"; };
+		7710FB4A2A422974002706DF /* Alpine Music AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alpine Music AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7710FB4C2A422974002706DF /* Alpine_Music_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpine_Music_AppUITests.swift; sourceTree = "<group>"; };
+		7710FB4E2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpine_Music_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		77118B5E29F8350B00C63F0C /* DonationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCell.swift; sourceTree = "<group>"; };
 		771BE82129EF6AE600E450D9 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
 		771BE82329F0760F00E450D9 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
@@ -46,7 +72,6 @@
 		774CF3DB2A01B054007BB528 /* PrivacyWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyWebViewViewController.swift; sourceTree = "<group>"; };
 		774CF3DE2A02E127007BB528 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		774CF3E92A02F9B9007BB528 /* Alpine Music App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alpine Music App.entitlements"; sourceTree = "<group>"; };
-		774CF3EA2A030125007BB528 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		77558A822A045F9900A539BC /* AVPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerManager.swift; sourceTree = "<group>"; };
 		775E602529E9D88600582A62 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		7787CC9929E86EC100167F99 /* Alpine Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpine Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +94,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7710FB3A2A42277C002706DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7710FB472A422974002706DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7787CC9629E86EC100167F99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,6 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7710FB3E2A42277C002706DF /* Alpine Music AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				7710FB3F2A42277C002706DF /* Alpine_Music_AppTests.swift */,
+			);
+			path = "Alpine Music AppTests";
+			sourceTree = "<group>";
+		};
+		7710FB4B2A422974002706DF /* Alpine Music AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7710FB4C2A422974002706DF /* Alpine_Music_AppUITests.swift */,
+				7710FB4E2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift */,
+			);
+			path = "Alpine Music AppUITests";
+			sourceTree = "<group>";
+		};
 		7744094929EC84D800904506 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +170,7 @@
 		775E602429E9D73800582A62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				774CF3EA2A030125007BB528 /* GoogleService-Info.plist */,
+				7710FB372A4226D2002706DF /* GoogleService-Info.plist */,
 				7787CCA529E86EC200167F99 /* Assets.xcassets */,
 				7787CCAA29E86EC200167F99 /* Info.plist */,
 				77BD906829F32F8C00E15650 /* product.storekit */,
@@ -126,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				7787CC9B29E86EC100167F99 /* Alpine Music App */,
+				7710FB3E2A42277C002706DF /* Alpine Music AppTests */,
+				7710FB4B2A422974002706DF /* Alpine Music AppUITests */,
 				7787CC9A29E86EC100167F99 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				7787CC9929E86EC100167F99 /* Alpine Music App.app */,
+				7710FB3D2A42277C002706DF /* Alpine Music AppTests.xctest */,
+				7710FB4A2A422974002706DF /* Alpine Music AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +252,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7710FB3C2A42277C002706DF /* Alpine Music AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7710FB432A42277C002706DF /* Build configuration list for PBXNativeTarget "Alpine Music AppTests" */;
+			buildPhases = (
+				7710FB392A42277C002706DF /* Sources */,
+				7710FB3A2A42277C002706DF /* Frameworks */,
+				7710FB3B2A42277C002706DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7710FB422A42277C002706DF /* PBXTargetDependency */,
+			);
+			name = "Alpine Music AppTests";
+			productName = "Alpine Music AppTests";
+			productReference = 7710FB3D2A42277C002706DF /* Alpine Music AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7710FB492A422974002706DF /* Alpine Music AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7710FB522A422974002706DF /* Build configuration list for PBXNativeTarget "Alpine Music AppUITests" */;
+			buildPhases = (
+				7710FB462A422974002706DF /* Sources */,
+				7710FB472A422974002706DF /* Frameworks */,
+				7710FB482A422974002706DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7710FB512A422974002706DF /* PBXTargetDependency */,
+			);
+			name = "Alpine Music AppUITests";
+			productName = "Alpine Music AppUITests";
+			productReference = 7710FB4A2A422974002706DF /* Alpine Music AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7787CC9829E86EC100167F99 /* Alpine Music App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7787CCAD29E86EC200167F99 /* Build configuration list for PBXNativeTarget "Alpine Music App" */;
@@ -222,9 +318,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					7710FB3C2A42277C002706DF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7787CC9829E86EC100167F99;
+					};
+					7710FB492A422974002706DF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 7787CC9829E86EC100167F99;
+					};
 					7787CC9829E86EC100167F99 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -248,19 +352,35 @@
 			projectRoot = "";
 			targets = (
 				7787CC9829E86EC100167F99 /* Alpine Music App */,
+				7710FB3C2A42277C002706DF /* Alpine Music AppTests */,
+				7710FB492A422974002706DF /* Alpine Music AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7710FB3B2A42277C002706DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7710FB482A422974002706DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7787CC9729E86EC100167F99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				77BD906329F305D000E15650 /* SupportMe.storyboard in Resources */,
 				7787CCA929E86EC200167F99 /* LaunchScreen.storyboard in Resources */,
+				7710FB382A4226D2002706DF /* GoogleService-Info.plist in Resources */,
 				7787CCA629E86EC200167F99 /* Assets.xcassets in Resources */,
-				774CF3EB2A030125007BB528 /* GoogleService-Info.plist in Resources */,
 				7787CCA429E86EC100167F99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +388,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7710FB392A42277C002706DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7710FB402A42277C002706DF /* Alpine_Music_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7710FB462A422974002706DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7710FB4D2A422974002706DF /* Alpine_Music_AppUITests.swift in Sources */,
+				7710FB4F2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7787CC9529E86EC100167F99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +433,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7710FB422A42277C002706DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7787CC9829E86EC100167F99 /* Alpine Music App */;
+			targetProxy = 7710FB412A42277C002706DF /* PBXContainerItemProxy */;
+		};
+		7710FB512A422974002706DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7787CC9829E86EC100167F99 /* Alpine Music App */;
+			targetProxy = 7710FB502A422974002706DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		7787CCA229E86EC100167F99 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -316,6 +466,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7710FB442A42277C002706DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QY57KKASP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alpine-software.Alpine-Music-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alpine Music App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Alpine Music App";
+			};
+			name = Debug;
+		};
+		7710FB452A42277C002706DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QY57KKASP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alpine-software.Alpine-Music-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alpine Music App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Alpine Music App";
+			};
+			name = Release;
+		};
+		7710FB532A422974002706DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QY57KKASP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alpine-software.Alpine-Music-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Alpine Music App";
+			};
+			name = Debug;
+		};
+		7710FB542A422974002706DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4QY57KKASP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alpine-software.Alpine-Music-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Alpine Music App";
+			};
+			name = Release;
+		};
 		7787CCAB29E86EC200167F99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,6 +725,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7710FB432A42277C002706DF /* Build configuration list for PBXNativeTarget "Alpine Music AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7710FB442A42277C002706DF /* Debug */,
+				7710FB452A42277C002706DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7710FB522A422974002706DF /* Build configuration list for PBXNativeTarget "Alpine Music AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7710FB532A422974002706DF /* Debug */,
+				7710FB542A422974002706DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7787CC9429E86EC100167F99 /* Build configuration list for PBXProject "Alpine Music App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
