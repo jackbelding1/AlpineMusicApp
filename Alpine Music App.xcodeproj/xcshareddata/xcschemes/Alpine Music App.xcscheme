@@ -28,6 +28,28 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7710FB3C2A42277C002706DF"
+               BuildableName = "Alpine Music AppTests.xctest"
+               BlueprintName = "Alpine Music AppTests"
+               ReferencedContainer = "container:Alpine Music App.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7710FB492A422974002706DF"
+               BuildableName = "Alpine Music AppUITests.xctest"
+               BlueprintName = "Alpine Music AppUITests"
+               ReferencedContainer = "container:Alpine Music App.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
