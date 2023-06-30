@@ -49,7 +49,6 @@ class StoreRepository: StoreRepositoryProtocol {
                     let transaction = try await self.checkVerified(result)
                     // deliver products to the user
                     await self.updateCustomerProductStatus()
-                    
                     await transaction.finish()
                 } catch {
                     print("transaction failed verification")
