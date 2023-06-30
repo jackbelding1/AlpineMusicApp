@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="254" id="hCR-IA-fBD"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c94-3p-Wju">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SocialTable" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c94-3p-Wju" userLabel="SocialTable">
                                 <rect key="frame" x="0.0" y="539" width="377" height="210"/>
                                 <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -39,12 +39,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="socialCell"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHK-aw-BXn" userLabel="aboutTextView">
                                 <rect key="frame" x="16" y="383" width="361" height="156"/>
                                 <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration" identifier="aboutTextView"/>
                                 <string key="text">Alpine Music originates from Michigan State University. Jack Belding, a member of MSU's Alpine Ski and Snowboard team, dedicated Alpine Music to crafting heavyweight house and techno records with the good vibes of undergraduate life.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -105,6 +107,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="currentStreamCell"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -229,6 +232,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="settingsCell"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -27,7 +27,7 @@ class HomeVC: UIViewController {
         currentStreamView.addGestureRecognizer(tapGestureRecognizer)
         
         fetchStreams()
-        
+        streamView.accessibilityIdentifier = "streamView"
         streamView.delegate = self
         streamView.dataSource = self
     }

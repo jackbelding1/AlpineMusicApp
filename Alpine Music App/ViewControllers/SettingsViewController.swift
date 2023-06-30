@@ -19,6 +19,7 @@ class SettingsVC: UIViewController, WKUIDelegate {
         super.viewDidLoad()
         settingsView.delegate = self
         settingsView.dataSource = self
+        settingsView.accessibilityIdentifier = "settingsTable"
     }
 }
 

@@ -24,10 +24,10 @@
 		774CF3E62A02E1DE007BB528 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 774CF3E52A02E1DE007BB528 /* FirebaseMessaging */; };
 		77558A832A045F9900A539BC /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77558A822A045F9900A539BC /* AVPlayerManager.swift */; };
 		775E602629E9D88600582A62 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E602529E9D88600582A62 /* Stream.swift */; };
+		7785C61D2A4F4020005D4BE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7787CCA229E86EC100167F99 /* Main.storyboard */; };
 		7787CC9D29E86EC100167F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9C29E86EC100167F99 /* AppDelegate.swift */; };
 		7787CC9F29E86EC100167F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CC9E29E86EC100167F99 /* SceneDelegate.swift */; };
 		7787CCA129E86EC100167F99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CCA029E86EC100167F99 /* HomeViewController.swift */; };
-		7787CCA429E86EC100167F99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7787CCA229E86EC100167F99 /* Main.storyboard */; };
 		7787CCA629E86EC200167F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7787CCA529E86EC200167F99 /* Assets.xcassets */; };
 		7787CCA929E86EC200167F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7787CCA729E86EC200167F99 /* LaunchScreen.storyboard */; };
 		7787CCB129E8707F00167F99 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7787CCB029E8707F00167F99 /* CustomTabBarController.swift */; };
@@ -158,6 +158,13 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		7752F3E42A4DFE5C00D5E026 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		775E602329E9D71F00582A62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +192,7 @@
 				7710FB3E2A42277C002706DF /* Alpine Music AppTests */,
 				7710FB4B2A422974002706DF /* Alpine Music AppUITests */,
 				7787CC9A29E86EC100167F99 /* Products */,
+				7752F3E42A4DFE5C00D5E026 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +274,8 @@
 				7710FB422A42277C002706DF /* PBXTargetDependency */,
 			);
 			name = "Alpine Music AppTests";
+			packageProductDependencies = (
+			);
 			productName = "Alpine Music AppTests";
 			productReference = 7710FB3D2A42277C002706DF /* Alpine Music AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -378,10 +388,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				77BD906329F305D000E15650 /* SupportMe.storyboard in Resources */,
+				7785C61D2A4F4020005D4BE1 /* Main.storyboard in Resources */,
 				7787CCA929E86EC200167F99 /* LaunchScreen.storyboard in Resources */,
 				7710FB382A4226D2002706DF /* GoogleService-Info.plist in Resources */,
 				7787CCA629E86EC200167F99 /* Assets.xcassets in Resources */,
-				7787CCA429E86EC100167F99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
