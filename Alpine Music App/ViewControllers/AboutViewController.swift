@@ -18,6 +18,7 @@ class AboutVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        socialTableView.accessibilityIdentifier = "socialTable"
         fetchSocials()
         socialTableView.delegate = self
         socialTableView.dataSource = self

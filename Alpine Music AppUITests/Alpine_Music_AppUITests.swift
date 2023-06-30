@@ -9,33 +9,76 @@ import XCTest
 
 final class Alpine_Music_AppUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    var app: XCUIApplication!
+    
+    override func setUp() {
+        super.setUp()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        print(app.debugDescription)
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    func testAboutScreen() {
+        app.tabBars.buttons["About"].tap()
+        
+        let imageView = app.images["aboutme"]
+        XCTAssertTrue(imageView.exists)
+        
+        let textView = app.textViews["aboutTextView"]
+        XCTAssertTrue(textView.exists)
+        XCTAssertEqual(textView.value as? String, "Alpine Music originates from Michigan State University. Jack Belding, a member of MSU's Alpine Ski and Snowboard team, dedicated Alpine Music to crafting heavyweight house and techno records with the good vibes of undergraduate life.")
+
+        let tableView = app.tables["socialTable"]
+        XCTAssertTrue(tableView.exists)
+
+        let socialCell = tableView.cells["socialCell"]
+        XCTAssertTrue(socialCell.exists)
+        print(socialCell.images)
+    }
+    
+    func testHomeScreen() {
+        app.tabBars.buttons["Home"].tap()
+        
+        let streamNowLabel = app.staticTexts["Stream Now"]
+        XCTAssertTrue(streamNowLabel.exists)
+        
+        let tableView = app.tables["streamView"]
+        XCTAssertTrue(tableView.exists)
+
+        let currentStreamCell = tableView.cells["currentStreamCell"]
+        XCTAssertTrue(currentStreamCell.exists)
+
+        let previousStreamsLabel = app.staticTexts["Previous Streams"]
+        XCTAssertTrue(previousStreamsLabel.exists)
+
+        let imageView = app.images["afk"]
+        XCTAssertTrue(imageView.exists)
+    }
+    
+    func testSettingScreen() {
+        app.tabBars.buttons["Settings"].tap()
+        print(app.debugDescription)
+
+        let tableView = app.tables["settingsTable"]
+        XCTAssertTrue(tableView.exists)
+        
+        let settingsCell = tableView.cells["settingsCell"]
+        XCTAssertTrue(settingsCell.exists)
+
+        let supportMeCell = tableView.cells.element(boundBy: 0)
+        XCTAssertTrue(supportMeCell.exists)
+        
+        supportMeCell.tap()
+
+        let supportLabel = app.staticTexts["supportLabel"]
+        XCTAssertTrue(supportLabel.exists)
+
+        let supportTV = app.textViews["supportTV"]
+        XCTAssertTrue(supportTV.exists)
+        
+        let disclaimerTV = app.textViews["disclaimerTV"]
+        XCTAssertTrue(disclaimerTV.exists)
+        
     }
 }
