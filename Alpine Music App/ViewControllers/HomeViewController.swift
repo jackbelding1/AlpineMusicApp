@@ -8,13 +8,16 @@
 import UIKit
 import AVKit
 
-class HomeVC: UIViewController {
+class HomeViewController: UIViewController {
     // table of previous streams
-    @IBOutlet var streamView: UITableView!
+    @IBOutlet var streamHistory: UITableView!
+    
     // live stream view
-    @IBOutlet weak var currentStreamView: UIStackView!
+    @IBOutlet weak var liveStream: UIStackView!
+    
     // previous stream objects to be displayed
     @Published var streams = [Stream]()
+    
     // streams networking object
     private let streamsRepository: StreamsRepositoryProtocol = StreamsRepository()
     
@@ -22,14 +25,17 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         // set tap handler for livestream view
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(streamViewTapped(tapGestureRecognizer:)))
-        currentStreamView.isUserInteractionEnabled = true
-        currentStreamView.addGestureRecognizer(tapGestureRecognizer)
+        let tapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(streamViewTapped(tapGestureRecognizer:))
+        )
+        liveStream.isUserInteractionEnabled = true
+        liveStream.addGestureRecognizer(tapGestureRecognizer)
         
         fetchStreams()
-        streamView.accessibilityIdentifier = "streamView"
-        streamView.delegate = self
-        streamView.dataSource = self
+        streamHistory.accessibilityIdentifier = "streamView"
+        streamHistory.delegate = self
+        streamHistory.dataSource = self
     }
     
     @objc func streamViewTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -42,9 +48,9 @@ class HomeVC: UIViewController {
         Task {
             do {
                 streams = try await streamsRepository.fetchStreams()
-                streamView.reloadData()
+                streamHistory.reloadData()
             } catch {
-                print("Cannoth fetch streams: \(error)")
+                print("Cannot fetch streams: \(error)")
             }
         }
     }

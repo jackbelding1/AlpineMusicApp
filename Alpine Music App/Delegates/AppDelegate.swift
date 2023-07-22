@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // configure firebase instance
         FirebaseApp.configure()
         // initialize push notification manager
-        let pushManager = PushNotificationManager(userID: "currently_logged_in_user_id")
+        let clientNotifications = PushNotificationManager(userID: "currently_logged_in_user_id")
         // register user for notifications
-        pushManager.registerForPushNotifications()
+        clientNotifications.registerForPushNotifications()
         return true
     }
 

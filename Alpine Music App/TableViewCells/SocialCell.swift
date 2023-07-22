@@ -8,23 +8,22 @@
 import UIKit
 import Kingfisher
 
-
-extension AboutVC: UITableViewDelegate {
+extension AboutViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // get url link
-        let socialUrl = URL(string: socials[indexPath.row].socialUrl)!
+        let socialURL = URL(string: socials[indexPath.row].profileURL)!
         
         // open social media URL
-        if UIApplication.shared.canOpenURL(socialUrl){
-            UIApplication.shared.open(socialUrl)
+        if UIApplication.shared.canOpenURL(socialURL) {
+            UIApplication.shared.open(socialURL)
         } else {
-            print("Can't open social url \(socials[indexPath.row].socialUrl)")
+            print("Can't open social url \(socials[indexPath.row].profileURL)")
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension AboutVC: UITableViewDataSource {
+extension AboutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0;
     }
@@ -33,21 +32,22 @@ extension AboutVC: UITableViewDataSource {
         return socials.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = socialTableView.dequeueReusableCell(withIdentifier: "socialCell", for: indexPath)
-        
-        let url = URL(string: socials[indexPath.row].imgUrl)
-        cell.imageView?.kf.setImage(with: url) { result in
+        let cell = socialsTable.dequeueReusableCell(
+            withIdentifier: "socialCell",
+            for: indexPath
+        )
+        let imageURL = URL(string: socials[indexPath.row].imageURL)
+        cell.imageView?.kf.setImage(with: imageURL) { result in
             switch result {
             case .success(let value):
-                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
                 tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
             case .failure(let error):
                 print("Job failed: \(error.localizedDescription)")
             }
         }
-        cell.textLabel?.text = socials[indexPath.row].socialCellText
+        cell.textLabel?.text = socials[indexPath.row].name
         cell.textLabel?.textColor = UIColor.white
         return cell
     }

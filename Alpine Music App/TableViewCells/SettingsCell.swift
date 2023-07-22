@@ -7,29 +7,40 @@
 
 import UIKit
 
-extension SettingsVC: UITableViewDelegate {
+extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = settings[indexPath.row]
         switch cell {
-            case "Support Me":
+        case "Support Me":
+            // initialize support me view controller
+            let supportMeViewController = UIStoryboard(
+                name: cell.replacingOccurrences(of: " ", with: ""),
+                bundle: nil
+            ).instantiateInitialViewController()!
+            
             // present user with support me pop over
-                let storyboard = UIStoryboard(name: cell.replacingOccurrences(of: " ", with: ""), bundle: nil)
-                let vc = storyboard.instantiateInitialViewController()!
-                self.present(vc, animated: true, completion: nil)
-            case "Privacy Policy":
-            // open privacy policy link
-                let myURL = URL(string:"https://www.alpinemusic.app/privacy/")
-                let vc = PrivacyWebViewViewController(url: myURL!, title: "Privacy Policy")
-                let navVC = UINavigationController(rootViewController: vc)
-                present(navVC, animated: true)
-            default:
-                break
+            present(supportMeViewController, animated: true, completion: nil)
+            
+        case "Privacy Policy":
+            // initialize privacy policy web view controller
+            let privacyPolicyWebViewController = UINavigationController(
+                rootViewController: PrivacyWebViewViewController(
+                    url: URL(string:"https://www.alpinemusic.app/privacy/")!,
+                    title: "Privacy Policy"
+                )
+            )
+            
+            // present privacy policy page in web view
+            present(privacyPolicyWebViewController, animated: true)
+            
+        default:
+            break
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension SettingsVC: UITableViewDataSource {
+extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
     }
@@ -39,10 +50,10 @@ extension SettingsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = settingsView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
+        let cell = settingsAndMore.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
         cell.textLabel?.text = settings[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
-
+        
         return cell
     }
 }

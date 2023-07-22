@@ -38,18 +38,11 @@ The app leverages Apple Push Notification Services to send notifications to user
 - Xcode 12 or later
 - Swift 5 or later
 
-## Installation
-
-1. Clone the repository to your local machine.
-2. Open the project in Xcode.
-3. Install any missing dependencies using Swift Package Manager.
-4. Build and run the app on a device or simulator.
-
 ## Usage
 
 1. Open the app.
 2. Browse previous live streams.
-3. Make donations to .
+3. Make secure donations to artists
 4. Join live streams and engage with DJs and other fans.
 5. Receive notifications for new live streams, merchandise, and other updates.
 

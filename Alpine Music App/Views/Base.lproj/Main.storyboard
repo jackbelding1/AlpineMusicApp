@@ -11,7 +11,7 @@
         <!--About-->
         <scene sceneID="ALF-xs-QPJ">
             <objects>
-                <viewController id="I7z-yV-7bq" customClass="AboutVC" customModule="Alpine_Music_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="I7z-yV-7bq" customClass="AboutViewController" customModule="Alpine_Music_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Wo-kd-dB7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,8 +70,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="person.circle.fill" catalog="system" id="GJ2-0v-t8f"/>
                     <connections>
-                        <outlet property="imageView" destination="koV-Je-COn" id="qfH-Hq-Syp"/>
-                        <outlet property="socialTableView" destination="c94-3p-Wju" id="fTo-NT-3AB"/>
+                        <outlet property="aboutMeImage" destination="koV-Je-COn" id="qfH-Hq-Syp"/>
+                        <outlet property="socialsTable" destination="c94-3p-Wju" id="q3O-5I-001"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="54Q-ZW-Ac8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -81,7 +81,7 @@
         <!--Home-->
         <scene sceneID="U6X-PP-8aq">
             <objects>
-                <viewController id="A4R-jz-b78" customClass="HomeVC" customModule="Alpine_Music_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A4R-jz-b78" customClass="HomeViewController" customModule="Alpine_Music_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dht-Rr-C7L">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,8 +162,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="9qx-MU-KzK"/>
                     <connections>
-                        <outlet property="currentStreamView" destination="A19-DJ-Lve" id="TJ2-f9-efT"/>
-                        <outlet property="streamView" destination="TxV-ea-AF5" id="sOy-WI-KVN"/>
+                        <outlet property="liveStream" destination="A19-DJ-Lve" id="TJ2-f9-efT"/>
+                        <outlet property="streamHistory" destination="TxV-ea-AF5" id="sOy-WI-KVN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXY-0L-cNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,7 +215,7 @@
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SettingsVC" customModule="Alpine_Music_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="Alpine_Music_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +248,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="ZrG-tv-7eI"/>
                     <connections>
-                        <outlet property="SettingsView" destination="O0a-wv-myA" id="bHz-GA-47Q"/>
+                        <outlet property="settingsAndMore" destination="O0a-wv-myA" id="J0T-ki-cn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

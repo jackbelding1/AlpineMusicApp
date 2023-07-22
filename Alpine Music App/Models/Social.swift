@@ -10,13 +10,13 @@ import Foundation
 // object representing a social media cell
 struct Social: Codable {
     // the url for the social media icon
-    var imgUrl:String
+    var imageURL:String
     // the text for the social media cell
-    var socialCellText:String
+    var name:String
     // the url for the social media link
-    var socialUrl:String
+    var profileURL:String
 }
 
 extension Social {
-    static let testSocial = Social(imgUrl: "https://drive.google.com/uc?id=1cNSPBCORmQlGsM_46J80lHqkYNLEMgxh", socialCellText: "Soundcloud", socialUrl: "soundcloud://")
+    static let testSocial = Social(imageURL: "https://drive.google.com/uc?id=1cNSPBCORmQlGsM_46J80lHqkYNLEMgxh", name: "Soundcloud", profileURL: "soundcloud://")
 }
