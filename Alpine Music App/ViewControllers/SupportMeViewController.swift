@@ -11,6 +11,8 @@ import StoreKit
 
 class SupportMeViewController: UIViewController {
     
+    @IBOutlet weak var supportMeBackButton: UIButton!
+    
     // table of donations options
     @IBOutlet weak var donationOptions: UITableView!
     
@@ -31,12 +33,18 @@ class SupportMeViewController: UIViewController {
         donationOptions.delegate = self
         donationOptions.dataSource = self
         updateListenerTask = storeRepository.listenForTransactions()
+        supportMeBackButton.accessibilityLabel = "supportMeBackButton"
         
         // initialize store for user
         Task {
             await storeRepository.requestProducts()
             await storeRepository.updateCustomerProductStatus()
         }
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
     }
 
     override func viewWillDisappear(_ animated: Bool) {
