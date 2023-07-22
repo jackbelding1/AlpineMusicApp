@@ -16,8 +16,7 @@ extension SupportMeVC: UITableViewDelegate {
 }
 
 extension SupportMeVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellLabels.count
     }
     

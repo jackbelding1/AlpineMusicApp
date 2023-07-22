@@ -12,9 +12,10 @@ import AVFoundation
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // play the stream for the selected cell
-        AVPlayerManager.shared.playStream(withURL:
-                                            URL(string: streams[indexPath.row].sourceURL)!,
-                                            self)
+        AVPlayerManager.shared.playStream(
+            withURL: URL(string: streams[indexPath.row].sourceURL)!,
+            self
+        )
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -29,12 +30,15 @@ extension HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = streamView.dequeueReusableCell(withIdentifier: "currentStreamCell", for: indexPath)
-        let url = URL(string: streams[indexPath.row].previewImageURL)
-        cell.imageView?.kf.setImage(with: url) { result in
+        let cell = streamView.dequeueReusableCell(
+            withIdentifier: "currentStreamCell",
+            for: indexPath
+        )
+        let imageURL = URL(string: streams[indexPath.row].previewImageURL)
+        cell.imageView?.kf.setImage(with: imageURL) { result in
             switch result {
             case .success(let value):
-                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
                 tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.none)
             case .failure(let error):
                 print("Job failed: \(error.localizedDescription)")
