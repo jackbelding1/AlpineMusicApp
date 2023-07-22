@@ -10,15 +10,15 @@ import Foundation
 // object representing a pre recorded stream fetched from firebase
 struct Stream: Codable {
     // url for stream thumbnail
-    var thumbnailUrl:String
+    var previewImageURL:String
     // the title to display
     var title: String
     // the stream URL
-    var url:String
+    var sourceURL:String
 }
 
 extension Stream{
-    static let testStream = Stream(thumbnailUrl: "https://drive.google.com/uc?id=1XPAU7Kxii6jxIZdnLABV6OQWAC-KdUAl",
+    static let testStream = Stream(previewImageURL: "https://drive.google.com/uc?id=1XPAU7Kxii6jxIZdnLABV6OQWAC-KdUAl",
                                    title: "Bloomberg Asia",
-                                   url: "https://www.bloomberg.com/media-manifest/streams/asia.m3u8")
+                                   sourceURL: "https://www.bloomberg.com/media-manifest/streams/asia.m3u8")
 }

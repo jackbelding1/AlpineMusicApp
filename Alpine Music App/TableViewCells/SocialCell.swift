@@ -12,13 +12,13 @@ import Kingfisher
 extension AboutVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // get url link
-        let socialUrl = URL(string: socials[indexPath.row].socialUrl)!
+        let socialUrl = URL(string: socials[indexPath.row].profileURL)!
         
         // open social media URL
         if UIApplication.shared.canOpenURL(socialUrl){
             UIApplication.shared.open(socialUrl)
         } else {
-            print("Can't open social url \(socials[indexPath.row].socialUrl)")
+            print("Can't open social url \(socials[indexPath.row].profileURL)")
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -37,7 +37,7 @@ extension AboutVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = socialTableView.dequeueReusableCell(withIdentifier: "socialCell", for: indexPath)
         
-        let url = URL(string: socials[indexPath.row].imgUrl)
+        let url = URL(string: socials[indexPath.row].imageURL)
         cell.imageView?.kf.setImage(with: url) { result in
             switch result {
             case .success(let value):
@@ -47,7 +47,7 @@ extension AboutVC: UITableViewDataSource {
                 print("Job failed: \(error.localizedDescription)")
             }
         }
-        cell.textLabel?.text = socials[indexPath.row].socialCellText
+        cell.textLabel?.text = socials[indexPath.row].name
         cell.textLabel?.textColor = UIColor.white
         return cell
     }

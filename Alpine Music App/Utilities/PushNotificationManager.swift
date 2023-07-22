@@ -79,12 +79,12 @@ class PushNotificationManager: NSObject, MessagingDelegate, UNUserNotificationCe
         let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
 
         // open live stream view
-        if var topController = keyWindow?.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
+        if var liveStream = keyWindow?.rootViewController {
+            while let presentedViewController = liveStream.presentedViewController {
+                liveStream = presentedViewController
             }
 
-            AVPlayerManager.shared.playLiveStream(topController)
+            AVPlayerManager.shared.playLiveStream(liveStream)
         }
         completionHandler()
     }

@@ -13,7 +13,7 @@ extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // play the stream for the selected cell
         AVPlayerManager.shared.playStream(withURL:
-                                            URL(string: streams[indexPath.row].url)!,
+                                            URL(string: streams[indexPath.row].sourceURL)!,
                                             self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -30,7 +30,7 @@ extension HomeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = streamView.dequeueReusableCell(withIdentifier: "currentStreamCell", for: indexPath)
-        let url = URL(string: streams[indexPath.row].thumbnailUrl)
+        let url = URL(string: streams[indexPath.row].previewImageURL)
         cell.imageView?.kf.setImage(with: url) { result in
             switch result {
             case .success(let value):
