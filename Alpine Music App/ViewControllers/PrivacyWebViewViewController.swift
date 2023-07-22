@@ -18,6 +18,7 @@ class PrivacyWebViewViewController: UIViewController {
         let webView = WKWebView(frame: .zero, configuration: configuration)
         return webView
     }()
+    
     // the url to open in the webview
     private let url: URL
     

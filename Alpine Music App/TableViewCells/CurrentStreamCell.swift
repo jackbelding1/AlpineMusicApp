@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import AVFoundation
 
-extension HomeVC: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // play the stream for the selected cell
         AVPlayerManager.shared.playStream(
@@ -20,7 +20,7 @@ extension HomeVC: UITableViewDelegate {
     }
 }
 
-extension HomeVC: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0;
     }
@@ -30,7 +30,7 @@ extension HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = streamView.dequeueReusableCell(
+        let cell = streamHistory.dequeueReusableCell(
             withIdentifier: "currentStreamCell",
             for: indexPath
         )

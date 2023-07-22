@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension SupportMeVC: UITableViewDelegate {
+extension SupportMeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // donate selected amount
         storeRepository.donate(option: indexPath.row)
@@ -15,9 +15,9 @@ extension SupportMeVC: UITableViewDelegate {
     }
 }
 
-extension SupportMeVC: UITableViewDataSource {
+extension SupportMeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellLabels.count
+        return donationOptionLabels.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -25,8 +25,8 @@ extension SupportMeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = donationsView.dequeueReusableCell(withIdentifier: "donationCell", for: indexPath)
-        cell.textLabel?.text = cellLabels[indexPath.row]
+        let cell = donationOptions.dequeueReusableCell(withIdentifier: "donationCell", for: indexPath)
+        cell.textLabel?.text = donationOptionLabels[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         return cell
     }

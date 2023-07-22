@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-extension AboutVC: UITableViewDelegate {
+extension AboutViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // get url link
         let socialURL = URL(string: socials[indexPath.row].profileURL)!
@@ -23,7 +23,7 @@ extension AboutVC: UITableViewDelegate {
     }
 }
 
-extension AboutVC: UITableViewDataSource {
+extension AboutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50.0;
     }
@@ -33,7 +33,7 @@ extension AboutVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = socialTableView.dequeueReusableCell(
+        let cell = socialsTable.dequeueReusableCell(
             withIdentifier: "socialCell",
             for: indexPath
         )

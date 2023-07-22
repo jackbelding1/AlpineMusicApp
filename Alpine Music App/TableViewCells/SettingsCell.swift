@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension SettingsVC: UITableViewDelegate {
+extension SettingsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = settings[indexPath.row]
         switch cell {
@@ -40,7 +40,7 @@ extension SettingsVC: UITableViewDelegate {
     }
 }
 
-extension SettingsVC: UITableViewDataSource {
+extension SettingsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
     }
@@ -50,7 +50,7 @@ extension SettingsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = settingsView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
+        let cell = settingsAndMore.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath)
         cell.textLabel?.text = settings[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         

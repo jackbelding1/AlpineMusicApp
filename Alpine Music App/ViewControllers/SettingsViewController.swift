@@ -8,18 +8,18 @@
 import UIKit
 import WebKit
 
-class SettingsVC: UIViewController, WKUIDelegate {
+class SettingsViewController: UIViewController, WKUIDelegate {
 
     // the table of app settings/more
-    @IBOutlet weak var settingsView: UITableView!
+    @IBOutlet weak var settingsAndMore: UITableView!
     // the setting cells to be displayed
     let settings:[String] = ["Support Me", "Privacy Policy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingsView.delegate = self
-        settingsView.dataSource = self
-        settingsView.accessibilityIdentifier = "settingsTable"
+        settingsAndMore.delegate = self
+        settingsAndMore.dataSource = self
+        settingsAndMore.accessibilityIdentifier = "settingsTable"
     }
 }
 
