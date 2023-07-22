@@ -71,14 +71,27 @@ final class Alpine_Music_AppUITests: XCTestCase {
         
         supportMeCell.tap()
 
-        let supportLabel = app.staticTexts["supportLabel"]
-        XCTAssertTrue(supportLabel.exists)
-
         let supportTV = app.textViews["supportTV"]
         XCTAssertTrue(supportTV.exists)
         
         let disclaimerTV = app.textViews["disclaimerTV"]
         XCTAssertTrue(disclaimerTV.exists)
+        
+        // Test donation options
+        
+        // test privacy policy
+        let supportMeBackButton = app.buttons["supportMeBackButton"]
+        XCTAssertTrue(supportMeBackButton.exists)
+        
+        supportMeBackButton.tap()
+        
+        let privacyPolicyCell = tableView.cells.element(boundBy: 1)
+        XCTAssertTrue(privacyPolicyCell.exists)
+        
+        privacyPolicyCell.tap()
+        let privacyPolicyWebView = app.webViews["privacyPolicyWebView"]
+        XCTAssertTrue(privacyPolicyWebView.exists)
+        
         
     }
 }

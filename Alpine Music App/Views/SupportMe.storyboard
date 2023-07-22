@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -68,23 +69,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5rT-1y-xA7">
+                                <rect key="frame" x="15.999999999999996" y="109" width="39.666666666666657" height="34.333333333333343"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" imagePadding="0.0"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vFc-zU-jNi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.1532291174" green="0.1532291174" blue="0.1532291174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="OHb-FR-2Z5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="A9Z-ne-bno"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="OHb-FR-2Z5" secondAttribute="bottom" constant="0.33000000000000002" id="Axm-qx-gI7"/>
+                            <constraint firstItem="5rT-1y-xA7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="K9Z-VS-Tdd"/>
                             <constraint firstItem="awQ-bC-FRd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="NnC-gZ-efs"/>
                             <constraint firstItem="awQ-bC-FRd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="OEp-Yp-ZQH"/>
                             <constraint firstItem="fR0-a5-uWh" firstAttribute="top" secondItem="awQ-bC-FRd" secondAttribute="bottom" constant="7.6699999999999999" id="XFr-Jn-nsE"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OHb-FR-2Z5" secondAttribute="trailing" constant="16" id="h8z-pN-Smm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="awQ-bC-FRd" secondAttribute="trailing" constant="16" id="iMb-R7-ZMr"/>
+                            <constraint firstItem="5rT-1y-xA7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="kSW-ed-rVl"/>
                             <constraint firstItem="fR0-a5-uWh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ksF-BZ-qFr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fR0-a5-uWh" secondAttribute="trailing" constant="16" id="qCH-uo-gBf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="donationOptions" destination="fR0-a5-uWh" id="hEq-nw-AeP"/>
+                        <outlet property="supportMeBackButton" destination="5rT-1y-xA7" id="Hag-bi-b7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,4 +105,7 @@
             <point key="canvasLocation" x="9.9236641221374047" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+    </resources>
 </document>

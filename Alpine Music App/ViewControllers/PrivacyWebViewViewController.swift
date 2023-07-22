@@ -16,6 +16,7 @@ class PrivacyWebViewViewController: UIViewController {
         let configuration = WKWebViewConfiguration()
         configuration.defaultWebpagePreferences = preferences
         let webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.accessibilityLabel = "privacyPolicyWebView"
         return webView
     }()
     
