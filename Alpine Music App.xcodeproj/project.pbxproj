@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7710FB382A4226D2002706DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7710FB372A4226D2002706DF /* GoogleService-Info.plist */; };
-		7710FB4D2A422974002706DF /* Alpine_Music_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710FB4C2A422974002706DF /* Alpine_Music_AppUITests.swift */; };
 		7710FB4F2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7710FB4E2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift */; };
 		77118B5F29F8350B00C63F0C /* DonationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77118B5E29F8350B00C63F0C /* DonationCell.swift */; };
 		771BE82229EF6AE600E450D9 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82129EF6AE600E450D9 /* Social.swift */; };
 		771BE82429F0760F00E450D9 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82329F0760F00E450D9 /* SocialCell.swift */; };
 		771BE82629F07DBD00E450D9 /* SocialsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771BE82529F07DBD00E450D9 /* SocialsRepository.swift */; };
+		772DCC122A6D99F9008E9358 /* AboutScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DCC112A6D99F9008E9358 /* AboutScreenUITests.swift */; };
+		772DCC142A6D9A15008E9358 /* HomeScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DCC132A6D9A15008E9358 /* HomeScreenUITests.swift */; };
+		772DCC162A6D9A2C008E9358 /* SettingScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772DCC152A6D9A2C008E9358 /* SettingScreenUITests.swift */; };
 		7744094829EC7AE900904506 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7744094729EC7AE900904506 /* Kingfisher */; };
 		7744094B29EC84F900904506 /* StreamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744094A29EC84F900904506 /* StreamRepository.swift */; };
 		774CF3DC2A01B054007BB528 /* PrivacyWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774CF3DB2A01B054007BB528 /* PrivacyWebViewViewController.swift */; };
@@ -62,12 +64,14 @@
 		7710FB372A4226D2002706DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7710FB3D2A42277C002706DF /* Alpine Music AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alpine Music AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7710FB4A2A422974002706DF /* Alpine Music AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Alpine Music AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7710FB4C2A422974002706DF /* Alpine_Music_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpine_Music_AppUITests.swift; sourceTree = "<group>"; };
 		7710FB4E2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alpine_Music_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		77118B5E29F8350B00C63F0C /* DonationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCell.swift; sourceTree = "<group>"; };
 		771BE82129EF6AE600E450D9 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
 		771BE82329F0760F00E450D9 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
 		771BE82529F07DBD00E450D9 /* SocialsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialsRepository.swift; sourceTree = "<group>"; };
+		772DCC112A6D99F9008E9358 /* AboutScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreenUITests.swift; sourceTree = "<group>"; };
+		772DCC132A6D9A15008E9358 /* HomeScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenUITests.swift; sourceTree = "<group>"; };
+		772DCC152A6D9A2C008E9358 /* SettingScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreenUITests.swift; sourceTree = "<group>"; };
 		7744094A29EC84F900904506 /* StreamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRepository.swift; sourceTree = "<group>"; };
 		774CF3DB2A01B054007BB528 /* PrivacyWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyWebViewViewController.swift; sourceTree = "<group>"; };
 		774CF3DE2A02E127007BB528 /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
@@ -134,8 +138,10 @@
 		7710FB4B2A422974002706DF /* Alpine Music AppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7710FB4C2A422974002706DF /* Alpine_Music_AppUITests.swift */,
 				7710FB4E2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift */,
+				772DCC112A6D99F9008E9358 /* AboutScreenUITests.swift */,
+				772DCC132A6D9A15008E9358 /* HomeScreenUITests.swift */,
+				772DCC152A6D9A2C008E9358 /* SettingScreenUITests.swift */,
 			);
 			path = "Alpine Music AppUITests";
 			sourceTree = "<group>";
@@ -420,8 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7710FB4D2A422974002706DF /* Alpine_Music_AppUITests.swift in Sources */,
+				772DCC142A6D9A15008E9358 /* HomeScreenUITests.swift in Sources */,
+				772DCC122A6D99F9008E9358 /* AboutScreenUITests.swift in Sources */,
 				7710FB4F2A422974002706DF /* Alpine_Music_AppUITestsLaunchTests.swift in Sources */,
+				772DCC162A6D9A2C008E9358 /* SettingScreenUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
