@@ -24,10 +24,6 @@ The app uses KingFisher, a Swift package, to load and display images in a smooth
 
 The app leverages Firebase Firestore to store and manage data, such as social media links, and previous performances.
 
-### Firebase Messenger
-
-The app uses Firebase Messenger to enable real-time messaging between DJs and fans. This feature allows DJs to engage with their fans and build a loyal following.
-
 ### Apple Push Notification Services
 
 The app leverages Apple Push Notification Services to send notifications to users, such as when a new live stream is starting or when new merchandise is available for purchase.
@@ -37,6 +33,14 @@ The app leverages Apple Push Notification Services to send notifications to user
 - iOS 13 or later
 - Xcode 12 or later
 - Swift 5 or later
+
+## Installation
+
+1. Clone the repository to your local machine.
+2. Open the project in Xcode.
+3. Install any missing dependencies using Swift Package Manager.
+4. Add the GoogleService-Info.plist file to the project. (For obtaining, [Send an email](mailto:alpinesoftwareco@gmail.com))
+5. Build and run the app on a device or simulator.
 
 ## Usage
 
